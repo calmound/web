@@ -44,12 +44,10 @@ public class AccountSer extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String status = request.getParameter("status");
-System.out.println(status);
 		if (status.equals("login")) {
 			Account account = new Account();
 			account.setAlogin(request.getParameter("alogin"));
 			account.setApass(request.getParameter("apass"));
-System.out.println(account.getAlogin()+" "+account.getApass());
 			account = accountImpl.queryAccount(account);
 			if (account == null) {// 登陆失败
 				request.setAttribute("error", "对不起登陆失败");
@@ -61,5 +59,4 @@ System.out.println(account.getAlogin()+" "+account.getApass());
 			}
 		}
 	}
-
 }

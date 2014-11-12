@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-   This is JSP.<br/>
+   <form action="/tt31/CategorySer" method="post">
+       类别名称:<input type="text" name="ctype" /><br/>
+       是否热点:<input type="checkbox" name="chot" value='true'/><br/>
+       <input type="submit" value="提交" />
+       <input type="hidden" name="status" value="saveCategory" />
+   </form>
 </body>
 </html>

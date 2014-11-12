@@ -9,7 +9,7 @@
 <body>
    <ul>
       <li><a href="/tt31/admin/saveCategory.jsp" target="right">添加类别</a></li>
-      <li>查询类别</li>
+      <li><a href="/tt31/admin/queryCategory.jsp" target="right">查询类别</li>
    </ul>
 </body>
 </html>
