@@ -45,9 +45,9 @@ public class CategorySer extends HttpServlet {
 		if(status.equals("saveCategory")){
 			Category category = new Category();
 			category.setCtype(request.getParameter("ctype"));
-System.out.println(request.getParameter("chot"));
+//System.out.println(request.getParameter("chot"));
 			category.setChot(Boolean.getBoolean(request.getParameter("chot")));
-System.out.println(category.isChot());
+//System.out.println(category.isChot());
 			category.setAccount((Account)request.getSession().getAttribute("account"));
 			categoryImpl.saveCategory(category);
 			response.sendRedirect("/tt31/admin/main.jsp");

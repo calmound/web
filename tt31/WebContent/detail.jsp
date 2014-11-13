@@ -7,10 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-   <ul>
-      <li><a href="/tt31/admin/saveCategory.jsp" target="right">添加类别</a></li>
-      <li><a href="/tt31/admin/queryCategory.jsp" target="right">查询类别</li>
-      <li><a href="/tt31/admin/saveGoods.jsp" target="right">插入商品</a></li>
-   </ul>
+   商品名:${param.gname}
+   <br/>
+   商品价格:${param.gprice}
+   <br/>
+   所属类别:${param.ctype}
+   <br/>
+   <img alt="" src="tt31/image/${param.gpic}">
+   <br/>
+   <input type="button" value="购买" />
 </body>
 </html>

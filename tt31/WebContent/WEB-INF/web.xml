@@ -25,12 +25,9 @@
     <filter-name>adminFilter</filter-name>
     <url-pattern>/admin/*</url-pattern>
   </filter-mapping>
-  
   <listener>
-      <listener-class>zs.shopping.util.ConextListener</listener-class>
+    <listener-class>zs.shopping.util.ConextListener</listener-class>
   </listener>
-  
-  
   <error-page>
     <error-code>404</error-code>
     <location>/error.jsp</location>

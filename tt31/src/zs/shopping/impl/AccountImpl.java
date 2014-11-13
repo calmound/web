@@ -24,7 +24,7 @@ public class AccountImpl implements IAccount {
 			pre.setString(2, account.getApass());
 			ResultSet rs = pre.executeQuery();
 			if (rs.next()) {
-	System.out.println(rs.getInt("aid"));
+	//System.out.println(rs.getInt("aid"));
 				temp = new Account();
 				temp.setAid(rs.getInt("aid"));
 				temp.setAlogin(rs.getString("alogin"));

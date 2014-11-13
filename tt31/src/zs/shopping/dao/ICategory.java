@@ -8,4 +8,6 @@ public interface ICategory {
    public void saveCategory(Category category);
    
    public List<Category> queryCategory(String ctype);
+   
+   public List<Category> queryCategory(boolean isChot);
 }
