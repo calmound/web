@@ -25,6 +25,20 @@
     <filter-name>adminFilter</filter-name>
     <url-pattern>/admin/*</url-pattern>
   </filter-mapping>
+  
+  <filter>
+    <filter-name>usersFilter</filter-name>
+    <filter-class>zs.shopping.filter.UsersFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>usersFilter</filter-name>
+    <url-pattern>/users/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+     <filter-name>usersFilter</filter-name>
+     <url-pattern>/ForderSer</url-pattern>
+  </filter-mapping>
+  
   <listener>
     <listener-class>zs.shopping.util.ConextListener</listener-class>
   </listener>
