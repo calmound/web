@@ -1,15 +1,15 @@
-ï»¿/*
-substr()æ–¹æ³•ä»å­—ç¬¦çªœä¸­æå–ä»startPosä½ç½®å¼€å§‹çš„æŒ‡å®šä¹¦ç›®çš„å­—ç¬¦çªœ
+/*
+substr()·½·¨´Ó×Ö·û´ÜÖĞÌáÈ¡´ÓstartPosÎ»ÖÃ¿ªÊ¼µÄÖ¸¶¨ÊéÄ¿µÄ×Ö·û´Ü
 stringObject.substr(startPos,length)
-startPos è¦æå–çš„å­çªœçš„èµ·å§‹ä½ç½®
-lengthæå–å­—ç¬¦çªœçš„é•¿åº¦
-æ³¨ï¼šè‹¥startPosä¸ºè´Ÿæ•°ï¼Œåˆ™ä»æœ€åä¸€ä¸ªå­—ç¬¦ç®—èµ·
+startPos ÒªÌáÈ¡µÄ×Ó´ÜµÄÆğÊ¼Î»ÖÃ
+lengthÌáÈ¡×Ö·û´ÜµÄ³¤¶È
+×¢£ºÈôstartPosÎª¸ºÊı£¬Ôò´Ó×îºóÒ»¸ö×Ö·ûËãÆğ
 */
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>æ— æ ‡é¢˜æ–‡æ¡£</title>
+<title>ÎŞ±êÌâÎÄµµ</title>
 <script type="text/javascript">
 var mystr="Hello World!";
 document.write(mystr.substr(6)+ "<br />");
@@ -20,7 +20,7 @@ document.write(mystr.substr(0,5)               );
 </body>
 </html>
 /*
-è¿è¡Œç»“æœï¼š
+ÔËĞĞ½á¹û£º
 world!
 Hello
 */

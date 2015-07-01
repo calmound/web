@@ -1,8 +1,8 @@
-ï»¿//å½“é¼ æ ‡ç‚¹å‡»"ç¡®å®š"æŒ‰é’®åï¼Œè°ƒç”¨openwin()å‡½æ•°ã€‚
+//µ±Êó±êµã»÷"È·¶¨"°´Å¥ºó£¬µ÷ÓÃopenwin()º¯Êı¡£
 <!DOCTYPE HTML>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>å•å‡»äº‹ä»¶ </title>
+<title>µ¥»÷ÊÂ¼ş </title>
 <script type="text/javascript">
   function openwin(){
      window.open('http://www.imooc.com','_blank','height=600,width=400,top=100,toolbar=no,left=0,menubar=no,scrollbars=no,status=no');}
@@ -10,7 +10,7 @@
 </head>
 <body>
   <form>
-    <input name="ç‚¹å‡»æˆ‘" type="button" value="ç‚¹å‡»æˆ‘" onclick="openwin()"/>
+    <input name="µã»÷ÎÒ" type="button" value="µã»÷ÎÒ" onclick="openwin()"/>
   </form>
 </body>
 </html>
