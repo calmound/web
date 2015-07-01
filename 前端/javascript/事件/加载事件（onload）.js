@@ -1,14 +1,14 @@
-//ʵ�ּ���ҳ��ʱ�������Ի��򡰼����У����Եȡ�����
+﻿//实现加载页面时，弹出对话框“加载中，请稍等…”。
 <!DOCTYPE HTML>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title> �����¼� </title>
+<title> 加载事件 </title>
 <script type="text/javascript">
   function message(){
-    alert("�����У����Եȡ�"); }
+    alert("加载中，请稍等…"); }
 </script>    
 </head>
 <body onload="message()">
-  ��ӭѧϰJavaScript��
+  欢迎学习JavaScript。
 </body>
 </html>

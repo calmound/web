@@ -1,18 +1,18 @@
-//ÊäÈëÁ½¸öÊıºÍÔËËã·û£¬¼ÆËã½á¹ûÊä³ö
+ï»¿//è¾“å…¥ä¸¤ä¸ªæ•°å’Œè¿ç®—ç¬¦ï¼Œè®¡ç®—ç»“æœè¾“å‡º
 <!DOCTYPE html>
 <html>
  <head>
-  <title> ÊÂ¼ş</title>  
+  <title> äº‹ä»¶</title>  
   <script type="text/javascript">
    function count(){
        
-    //»ñÈ¡µÚÒ»¸öÊäÈë¿òµÄÖµ
+    //è·å–ç¬¬ä¸€ä¸ªè¾“å…¥æ¡†çš„å€¼
     var value1=document.getElementById("txt1").value;
-	//»ñÈ¡µÚ¶ş¸öÊäÈë¿òµÄÖµ
+	//è·å–ç¬¬äºŒä¸ªè¾“å…¥æ¡†çš„å€¼
     var value2=document.getElementById("txt2").value;
-	//»ñÈ¡Ñ¡Ôñ¿òµÄÖµ
+	//è·å–é€‰æ‹©æ¡†çš„å€¼
     var Selection=document.getElementById("select").value;
-	//»ñÈ¡Í¨¹ıÏÂÀ­¿òÀ´Ñ¡ÔñµÄÖµÀ´¸Ä±ä¼Ó¼õ³Ë³ıµÄÔËËã·¨Ôò
+	//è·å–é€šè¿‡ä¸‹æ‹‰æ¡†æ¥é€‰æ‹©çš„å€¼æ¥æ”¹å˜åŠ å‡ä¹˜é™¤çš„è¿ç®—æ³•åˆ™
     var value3="";
     switch(Selection){
         case "+": value3=parseInt(value1)+parseInt(value2);
@@ -23,7 +23,7 @@
                    break;
         case "/": value3=parseInt(value1)/parseInt(value2);
     }
-    //ÉèÖÃ½á¹ûÊäÈë¿òµÄÖµ 
+    //è®¾ç½®ç»“æœè¾“å…¥æ¡†çš„å€¼ 
     document.getElementById("fruit").value=value3;
    }
   </script> 
@@ -37,7 +37,7 @@
 		<option value="/">/</option>
    </select>
    <input type='text' id='txt2' /> 
-   <input type='button' value=' = ' onClick="count()"/> <!--Í¨¹ı = °´Å¥À´µ÷ÓÃ´´½¨µÄº¯Êı£¬µÃµ½½á¹û--> 
+   <input type='button' value=' = ' onClick="count()"/> <!--é€šè¿‡ = æŒ‰é’®æ¥è°ƒç”¨åˆ›å»ºçš„å‡½æ•°ï¼Œå¾—åˆ°ç»“æœ--> 
    <input type='text' id='fruit' />   
  </body>
 </html>
