@@ -1,0 +1,416 @@
+
+html {
+	background: #000101;
+}
+
+body {
+	margin: 0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+	width: 100%;
+	display: table;
+	background: #000000;
+}
+
+a:link, a:visited {	color: #CCFFFF; text-decoration: underline; }
+a:active, a:hover { color: #CCFF33; text-decoration: none; }
+
+p {
+	font-size: 13px;
+	color: #99CCFF;
+	text-align: justify;
+	margin: 0 0 20px 0;		
+}
+
+h1 {
+	font-size: 28px;
+	color: #99CCFF;
+	font-weight: normal;
+	margin: 0 0 20px 0;
+}
+
+h2 {
+	font-size: 20px;
+	color: #CCFFFF;
+	margin: 0 0 20px 0;		
+}
+
+h3 {
+	font-size: 25px;
+	color: #99CCFF;
+	margin: 0 0 20px 0;
+}
+
+h4 {
+	font-size: 13px;
+	color: #CCFFFF;
+	margin: 0 0 20px 5px;
+	background: url(images/templatemo_bullet_arrow.png) no-repeat;
+	background-position: 0 6px ;
+	padding: 0 0 0 15px;	
+}
+
+.templatemo_container {
+	width: 960px;
+	margin:  0 auto;
+}
+
+#templatemo_top_section {
+	width: 100%;
+	height: 258px;
+	background: url(images/templatemo_top_bg.jpg) repeat-x;
+}
+
+#templatemo_header {
+	width: 960px;
+	height: 257px;
+	padding: 1px 0 0 0;
+}
+
+#templatemo_logo_area {
+	float: left;
+	color: #fff;
+	width: 300px;
+	height: 75px;
+	margin: 40px 0 0 25px;
+}
+
+#templatemo_logo_area h2 {
+	font-size: 56px;
+	color: #6eccdd;
+	margin: 0 0 15px 0;
+}
+
+#templatemo_logo_area p {
+	font-size: 19px;
+	color: #99CCFF;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0 0 0 50px;
+}
+
+#templatemo_header_right {
+	float: right;	
+	width: 420px;
+	height: 110px;
+	margin: 30px 0 0 0;
+}
+
+#templatemo_header_right h2 {
+	color: #FFFFFF;
+	font-size: 26px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#templatemo_header_right p {
+	margin: 0;
+	color: #99CCFF;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	line-height: 1.3em;
+}
+
+#templatemo_menu {
+	float: left;
+	width: 960px;
+	height: 103px;
+	padding: 0 0 0 0;
+	margin: 14px 0 0 0;
+}
+
+#templatemo_menu ul {
+	margin: 0px;
+	padding: 0 0 0 0;
+	width: 960px;
+	list-style: none;
+}
+
+#templatemo_menu ul li {
+	display: inline;
+}
+
+#templatemo_menu ul li {
+	float: left;
+	height: 68px;
+	padding: 35px 60px 0 25px;	
+	text-align: center;
+	font-size: 12px;
+	text-align: left;
+	text-decoration: none;
+	border-right: 1px solid #11344e;
+	font-size: 20px;
+	outline: none;
+	color: #d0e6ff;
+}
+
+#templatemo_menu ul li p {
+	color: #224466;
+	font-size: 15px;
+	text-align: left;
+	margin: 0 0 0 0;
+}
+
+#templatemo_menu ul li a {
+	text-decoration: none;
+}
+
+#templatemo_menu ul li a:hover {
+	text-decoration: none;
+}
+
+#templatemo_menu .last {
+	border-right: none;
+}
+
+#templatemo_menu li:hover, #templatemo_menu .current {
+	background: url(images/templatemo_menu_current.png) top  repeat-x;
+}
+
+#templatemo_middle_section {
+	background: url(images/templatemo_middle_bg.jpg) #16416e repeat-x;
+	border-bottom: 1px solid #007dff;
+}
+
+#templatemo_buttom_section {
+	background: url(images/templatemo_buttom_bg.jpg) #000101 repeat-x top;
+}
+
+#templatemo_content {
+	width: 960px;
+}
+
+.templatemo_3_col {
+	float: left;	
+	width: 275px;
+	padding: 20px 0;	
+}
+
+.middle {
+	margin: 0 20px;
+	min-height: 480px;
+	width: 330px;
+}
+
+.right_section {
+	background: url(images/templatemo_shape_right.png) repeat-y left;
+	min-height: 480px;
+	padding: 20px 0 20px 20px;
+}
+
+.left_section {
+	background: url(images/templatemo_shape_left.png) repeat-y right;
+	min-height: 480px;
+	padding: 20px 20px 20px 0;
+}
+
+.mid_img {
+	margin: 0 0 10px 0;	
+}
+
+.image {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.templatemo_section_2 {
+	width: 275px;
+	background: url(images/templatemo_section_1.png) no-repeat top;
+	margin: 20px 0 0 -10px;
+	padding: 10px;
+}
+
+.templatemo_section_2 h4 {
+	margin: 0 0 5px 0;
+}
+
+.templatemo_section_2 p {
+	margin: 0 0 5px 16px;
+}
+
+.templatemo_bottom_panel {
+	background: url(images/templatemo_bottom_panel_bg.png) no-repeat bottom left;
+	width: 960px;
+}
+
+.bottmo_middle {
+	margin: 0 20px;
+	width: 330px;
+}
+
+.bottom_right {
+	padding: 20px 0 20px 20px;
+}
+
+.bottom_left {
+	padding: 20px 20px 20px 0;
+}
+
+.templatmo_newsletter {
+	background: url(images/templatemo_newsletter_bg.png);
+	width: 266px;
+	height: 156px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.templatmo_newsletter h4 {
+	font-size: 15px;
+	color: #000;
+	margin: 2px 0 0 8px;
+	background: none;
+}
+
+.templatmo_newsletter p {
+	font-size: 13px;
+	color: #141414;
+	margin: 15px 0 0 60px;
+}
+
+.templatemo_h_line {
+	height: 0px;
+	border-top: 1px solid #1e4d7e;
+	margin: 0 0 5px 0;
+}
+
+.templatemo_more {
+	float: right;
+	background: url(images/templatemo_more.png) no-repeat;
+	width: 81px;
+	font-size: 13px;
+	text-align: center;
+	margin: 10px 10px 10px 0;
+	color: #ffc600;
+	padding: 3px 0 0 0;
+}
+
+form {
+	margin: 15px 0 0 0;
+}
+
+label { 
+	float: left;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:13px;
+	color: #202020;
+	margin: 0 0 0 10px;
+}
+
+.field {
+	float: left;
+	width: 116px;
+	height: 19px;
+	border: none;	
+	color : #000;
+	font-size: 12px;
+	background: url(images/templatemo_textbox.jpg) no-repeat;
+	margin: 0 0 0 10px;
+	padding: 2px 5px 0 5px;
+}
+
+.button {
+	width: 60px;
+	height: 20px;
+	font-size: 11px;
+	border: none;	
+	color: #424242;
+	background: url(images/templatemo_subscribe.png) no-repeat;
+	background-position: 10px 9px;
+	margin: 0 0 0 0;
+	cursor: pointer;
+	text-decoration: underline;	
+}
+
+.templatemo_more a {
+	color: #ffc600;
+	text-decoration: none;
+}
+
+.templatemo_more:hover {
+	text-decoration: underline;	
+}
+
+.templatemo_list {
+	list-style: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #a0a5ac;
+	padding: 0;
+	margin: 0;
+}
+
+.templatemo_list li {
+	background: url(images/templatemo_bullet.png) no-repeat;
+	background-position: 0 6px;
+	padding: 0 0 0 15px;
+	margin: 0 0 5px 0;
+}
+
+.templatemo_list a {
+	color: #CCFFFF;
+	text-decoration: none;
+}
+
+.templatemo_list a:hover {
+	color: #CCFF00;
+	text-decoration: none;
+}
+
+.bullet_arrow {
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.bullet_arrow li {
+	background: url(images/templatemo_bullet_arrow_2.png) no-repeat;
+	background-position: 0 7px;
+	padding: 0 0 0 15px;
+	margin: 0 0 5px 0;
+}
+
+#templatemo_footer {
+	width: 280px;
+	color: #66AACC;
+	margin: 0 0 10px 0;
+	text-align: center;
+	padding: 10px 0;
+}
+
+#templatemo_footer_top {
+	width: 280px;
+	height: 4px;
+	background: url(images/templatemo_footer_top.png) no-repeat;
+}
+#templatemo_footer_mid {
+	width: 270px;
+	background: url(images/templatemo_footer_mid.png);
+	padding: 0 5px;
+}
+
+#templatemo_footer_bottom {
+	width: 280px;
+	height: 4px;
+	background: url(images/templatemo_footer_bottom.png) no-repeat;
+}
+
+#templatemo_footer a {
+	color: #66AACC;
+}
+
+.cleaner {
+	clear: both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.cleaner_width_left {
+	float: left;
+	width: 50px;
+	height: 1px;
+}
+
+.cleaner_width_right {
+	float: right;
+	width: 50px;
+	height: 1px;
+}

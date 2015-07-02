@@ -1,0 +1,131 @@
+/*
+ * Color, Border, and Button Rules
+ */
+.contentslider {
+  padding: 0; /* This acts as a border for the content slider */
+  background: none; /* This is the color of said border */
+} 
+.cs_wrapper, .cs_article {
+  background-color: none; /* Background color for the entries */
+}
+.cs_leftBtn, .cs_rightBtn {
+	margin-top: 50px;
+  width:52px; /* Should be as wide as the button graphic being used */
+  background: none; /* This will probably match the contentslider bg color */
+}
+
+/*
+ * Article styles (font, color, etc.)
+ *
+ * If textResize is set to TRUE, sizing shouldn't need to be touched. However,
+ * depending on the sizes you have defined, additional tweaking may be
+ * required in order to get the text to display properly.
+ */
+
+/*
+ ******************************************************************************
+ * These styles may be affected by the plugin, so avoid changing them if 
+ * it's not absolutely necessary.
+ ******************************************************************************
+ */
+.contentslider {
+  position:relative;
+  display:block;
+  width: 650px;
+  height: 160px;
+  margin:0 auto;
+  overflow:hidden;
+}
+.cs_wrapper {
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+.cs_slider {
+  position:absolute;
+  width:10000px;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.cs_article {
+  float:left;
+  position:relative;
+  top:0;
+  left:0;
+  display:block;
+  width: 630px;
+  height: 160px;
+  margin:0 auto;
+  padding: 30px 0;
+  background-color: none;
+}
+
+.cs_article img {
+	float: left;
+	width: 200px;
+	height: 100px;
+	margin-left: 80px;	
+	border: 1px solid #000000;
+}
+
+.cs_article .text {
+	float: right;
+	margin-right: 80px;
+	width: 250px;
+}
+
+.text h2 {
+	color: #5e7d05;
+	margin: 0 0 5px 0;
+	padding: 0 0 7px 0;	
+}
+
+.text h2 a, .text h2 a:hover, .text h2 a:visited{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #5e7d05;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.cs_article p {
+	color: #534724;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.cs_article .readmore {
+	color: #5e7d05;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.cs_article .readmore:hover {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.cs_leftBtn, .cs_rightBtn {
+  position:absolute;
+  top: 0px;
+  height: 160px;
+  padding:0;
+  z-index:10000;
+}
+.cs_leftBtn {
+  left:0;
+  outline:0;
+}
+.cs_rightBtn {
+  right:0;
+  outline:0;
+}
+.cs_leftBtn img, .cs_rightBtn img {
+  border:0;
+  position:relative;
+  top: 10px;
+  margin:0;
+}

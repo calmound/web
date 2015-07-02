@@ -1,0 +1,65 @@
+*{margin:0px; padding:0px;}
+body{ color:#687f96; font-size:12px;}
+body img{ border:0px;}
+.clear{ clear:both;}
+ul{list-style-type: none;}
+a{ color:#687f96; text-decoration:none;}
+.zhong { width:1000px; margin:0 auto;}
+.top{ height:73px;background:url(../images/bg_1.gif) repeat-x;padding:0 24px;}
+.top_left{ float:left; margin-top:14px;}
+.top_right{ float:right; margin-top:15px; text-align:right;}
+.top_right_1{padding-right:35px;}
+.top_right_1,.top_right_1 a{ color:#0473a9;}
+.clearfix:after{content:"&nbsp;";display:block;height:0;clear:both;visibility:hidden;}.clearfix{display:inline-block;}
+.menu{background:url(../images/bg_2.gif) repeat-x; height:52px;padding-left:80px;}
+.menusel{ float:left;width:115px; position:relative; margin-top:20px;}
+.menusel h2{ font-size:12px; height:32px; font-weight:normal;}
+.menusel a{text-align:center; width:130px;height:25px;  position:relative; z-index:2; color:#fff;}
+.position{ position:absolute; z-index:1; margin-left:-10px;}
+.menusel ul{width:130px; background:#608ab3;margin-top: -1px; position:relative; z-index:1; display:none;}
+.menusel .block{ display:block;}
+.typeul li{border-bottom:1px solid #fff;width:124px; position:relative; float:left; height:35px; line-height:35px; padding-left:6px;}
+.typeul{  margin-left:0;  }
+.typeul ul{left:130px; top:0; position:absolute;}
+.fli{ margin-top:1px;}
+.menusel .lli{ border:none; }
+.main{background:url(../images/bg_7.gif) repeat-x; min-height:573px;_height:573px; padding:22px 37px 0 25px;}
+.left{ width:184px; float:left; overflow:hidden;}
+.left_title{ color:#fff;background:url(../images/bg_3.gif) repeat-x; height:22px; line-height:22px;border:solid 1px #206292; padding-left:9px; margin-bottom:8px;}
+.input_1{background:url(../images/bg_4.gif) no-repeat; width:121px; height:23px; line-height:23px; border:0px;}
+.input_2{background:url(../images/bg_5.gif) no-repeat; width:121px; height:23px; line-height:23px; border:0px;}
+.input_3{background:url(../images/bg_6.gif) no-repeat; width:64px; height:23px; line-height:23px; border:0px;}
+.box_1{ margin-bottom:28px;}
+.left_nr li{background:url(../images/dian.gif) no-repeat 13px 6px; padding-left:25px; height:20px; line-height:20px;}
+.right{ float:right; width:692px;}
+.right_top_img{ text-align:right; padding-bottom:35px;}
+.news{float:right; width:665px;}
+.news_title{border-bottom: dashed 1px #84888a; width:666px; height:30px; margin-bottom:12px;}
+.news_title span{ float:left;}
+.news_title a{float:right; margin-top:10px;}
+.news table a{background:url(../images/dian_2.gif) no-repeat 0 6px; padding-left:10px;}
+.huoban{ margin:20px 0 15px 0;}
+.huoban_title{background:url(../images/img_9.gif) no-repeat 6px 0; padding-left:35px; height:30px;}
+.huoban_nr{ background:#fff; padding:11px 0; border-top:solid 1px #c6d0da;border-bottom:solid 1px #c6d0da;}
+.huoban_nr li{ float:left; margin-left:24px; display:inline;}
+.bottom{ background:url(../images/bg_8.gif) repeat-x; height:189px; text-align:center; padding-top:15px;}
+.meun_2{height:33px; line-height:33px; color:#c4c4c4;background:#808489 url(../images/img_10.gif) no-repeat 13px 15px; padding-left:33px;}
+.meun_2 a{ color:#fff;}
+.left_news ul{ width:300px;}
+.left_news li{ border-bottom:dashed 1px #84888a; height:35px; line-height:35px; padding-left:10px;}
+.left_news li a{background:url(../images/img_11.gif) no-repeat 158px 0; padding-right:200px; color:#39485b;}
+.left_news li a:hover,.left_news li a.hover{background:url(../images/img_12.gif) no-repeat 158px 0;color:#005289; font-weight:bold;}
+.right_title{background: url(../images/img_8.gif) no-repeat;padding-left:37px;height:38px;border-bottom:solid 1px #84888a; padding-top:3px;}
+.right_title img{ float:left;}
+.right_title div{ float:right; color:#686868;}
+.right_title div span{color:#01548d;}
+.liebiao ul{ padding:10px 0;border-bottom:solid 1px #84888a; margin-bottom:15px;}
+.liebiao li{ height:24px; line-height:24px;}
+.liebiao li a{ float:left;}
+.liebiao li span{ float:right;}
+.fanye_left{float:left;color:#01548e;}
+.fanye_right{float:right; color:#222;}
+.fanye_right a{ font-weight:bold; margin:0 4px; display:inline;}
+.right_title b{float:left; font-size:16px; color:#01548e;}
+.xiangqing{ line-height:24px;}
+.laiyuan{ text-align:right;color:#01548e;padding:20px 0;}

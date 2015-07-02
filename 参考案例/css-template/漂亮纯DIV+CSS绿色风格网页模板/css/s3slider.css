@@ -1,0 +1,67 @@
+#slider {
+	float: left;
+	margin: 50px 0 0 50px;
+    width: 400px; /* important to be same as image width */
+    height: 200px; /* important to be same as image height */
+    position: relative; /* important */
+	background: url(images/templatemo_banner_image_bg.jpg) no-repeat;
+	overflow: hidden;
+}
+#sliderContent {
+	padding: 10px;
+    width: 380px; /* important to be same as image width or wider */
+	height: 180px;
+    position: absolute;
+	top: 0;
+	margin-left: 0;
+}
+#sliderContent .sliderImage {
+    float: left;
+    position: relative;
+	display: none;
+}
+.sliderImage span {
+    position: absolute;
+	font: 13px Arial, Helvetica, sans-serif;
+    padding: 10px 15px;
+    width: 350px;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+
+.clea#sliderContent  {
+	clear: both;
+}
+#sliderContent .sliderImage span strong {
+    font-size: 15px;
+}
+#sliderContent .top {
+	top: 0;
+	left: 0;
+}
+#sliderContent .bottom {
+	bottom: 0;
+    left: 0;
+}
+
+.left {
+	top: 0;
+    left: 0;
+	width: 250px !important;
+	height: 150px;
+}
+.right {
+	right: 0;
+	bottom: 0;
+	width: 250px !important;
+	height: 155px;
+}
+
+ul { margin: 0; padding: 0; list-style-type: none; list-style: none;}
+
+ul li { margin: 0; padding: 0; }

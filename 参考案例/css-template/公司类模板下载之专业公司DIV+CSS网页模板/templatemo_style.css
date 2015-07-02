@@ -1,0 +1,441 @@
+/*
+CSS Credit: http://sc.xueit.com
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background: #ffffff url(images/templatemo_main_bg.jpg) repeat-x;
+}
+
+a:link, a:visited { color: #000000; text-decoration: none; font-weight: bold; } 
+a:active, a:hover { color: #000000; text-decoration: underline; } 
+
+p { margin: 0px; padding: 0px; text-align: justify; }
+
+img { margin: 0px; padding: 0px; border: none; }
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+
+.margin_bottom_10 { clear: both; width: 100%; height: 10px; font-size: 1px;	}
+.margin_bottom_20 { clear: both; width: 100%; height: 20px; font-size: 1px;	}
+.margin_bottom_30 { clear: both; width: 100%; height: 30px; font-size: 1px;	}
+.margin_bottom_40 { clear: both; width: 100%; height: 40px; font-size: 1px;	}
+.margin_bottom_50 { clear: both; width: 100%; height: 50px; font-size: 1px;	}
+.margin_bottom_60 { clear: both; width: 100%; height: 60px; font-size: 1px;	}
+
+.margin_right_25 { margin-right: 25px; }
+.margin_right_60 { margin-right: 60px; }
+
+.border_bottom {
+	border-bottom: 1px solid #999;
+}
+
+.rc_btn_01 a {
+	clear: both;
+	float: left;
+	padding-left: 30px;
+	display: block;
+	width: 200px;
+	font-size: 12px;
+	background: url(images/templatemo_icon_01.png) no-repeat;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.rc_btn_02 a {
+	clear: both;
+	display: block;
+	float: right;
+	text-align: center;
+	width: 106px;
+	height: 28px;
+	padding-top: 8px;
+	background: url(images/templatemo_button_01.png) no-repeat;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* header */
+#templatemo_header_wrapper {
+	width: 100%;
+	height: 120px;
+	margin: 0 auto;
+	background: url(images/template_header_bg.jpg) repeat-x;
+}
+
+#templatemo_header {
+	width: 980px;
+	height: 120px;
+	margin: 0 auto;
+	background: url(images/template_header_bg_01.jpg)  no-repeat;
+}
+
+#templatemo_header #site_title_section {
+	float: left;
+	width: 300px;	
+	margin-left: 30px;
+	text-align: center;
+}
+
+#site_title_section #site_title {
+	margin-top: 30px;
+	padding: 10px 0;
+	font-size: 30px; 
+	color: #4379ab;
+	font-weight: bold;
+}
+
+#site_title_section #salogon {
+	font-size: 14px;
+	margin-left: 20px;
+	color: #333333;
+}
+
+#templatemo_header #search_section {
+	float: right;
+
+	margin-top: 40px;
+	margin-right: 20px;
+}
+
+#search_section form {
+	margin: 0px;
+	padding: 0px;
+}
+
+#searchfield {
+	height: 20px;
+	width: 200px;
+	padding: 5px;
+	color: #000;
+	font-size: 13px;
+	font-variant: normal;
+	line-height: normal;
+	background: #86d8ff;
+	border: 1px solid #ffffff;	
+}
+
+#searchbutton {
+	width: 106px;
+ 	height: 35px;
+	margin: 0 0 0 7px;
+	padding: 0 6px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: pre;
+	background: url(images/templatemo_search_button.png); 
+	border: none;
+}
+/* end of header */
+
+/* banner */
+#templatemo_banner_wrapper {
+	clear: both;
+	width: 100%;
+	height: 260px;
+	margin: 0 auto;
+	background: url(images/templatemo_banner_bg_repeat.jpg) repeat-x;
+}
+
+#templatemo_banner {
+	width: 920px;
+	height: 260px;
+	margin: 0 auto;
+	padding: 0 30px;
+	background: url(images/templatemo_banner_bg.jpg) no-repeat;
+}
+
+#banner_header_01 {
+	padding: 65px 0 15px 0;
+	font-size: 50px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#banner_header_02 {
+	margin-left:10px;
+	margin-bottom: 20px;	
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#banner_text {
+	color: #999;
+	width: 500px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+#banner_text p {
+	margin-bottom: 20px;
+}
+/* end of banner */
+
+/* menu */
+#templatemo_menu_wrapper {
+	clear: both;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	background: url(images/templatemo_menu_bg.jpg) repeat-x;
+}
+
+#templatemo_menu {
+	clear: both;
+	width: 980px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+#templatemo_menu ul {
+	float: left;
+	margin: 0px;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+
+#templatemo_menu ul li {
+	display: inline;
+}
+
+#templatemo_menu ul li a {
+	position: relative;
+	float: left;
+	display: block;
+	height: 30px;
+	width: 120px;
+	padding-top: 20px;
+	margin-right:10px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	background: url(images/templatemo_menu_button.jpg) bottom right no-repeat;
+	color: #333333;	
+	outline: none;
+}
+
+#templatemo_menu ul li a span {
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	background: url(images/templatemo_menu_button_left.jpg) left bottom no-repeat;
+}
+
+#templatemo_menu li a:hover, #templatemo_menu li .current {
+	color: #ffffff;
+	height: 35px;
+	padding-top: 15px;
+	background: url(images/templatemo_menu_button_hover.jpg) bottom right no-repeat;
+}
+
+#templatemo_menu li a:hover span, #templatemo_menu li .current span	{
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	background: url(images/templatemo_menu_button_hover_left.jpg) bottom right no-repeat;	
+}
+/* end of menu*/
+
+/* content */
+#templatemo_content_wrapper {
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	background: #ffffff;
+}
+
+#templatemo_content {
+	width: 960px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+#templatemo_content #content_left {
+	float: left;
+	width: 260px;
+	margin: 0 40px 0 0;
+	padding:  0 39px 0 0;
+	border-right: 1px solid #999;
+}
+
+#templatemo_content #content_right {
+	float: right;
+	width: 620px;
+	margin: 0px;
+	background: url(images/templatemo_content_top.jpg) top repeat-x;
+}
+
+.content_header_01 {
+	font-size: 22px;
+	color: #4895c8;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background: url(images/templatemo_horizontal_divider_01.jpg) bottom repeat-x;	
+}
+
+.content_header_02 {
+	font-size: 22px;
+	color: #4895c8;
+	padding-bottom: 10px;
+	background: url(images/templatemo_horizontal_divider_01.jpg) bottom repeat-x;	
+}
+
+#content_left .content_left_section {
+	clear: both;
+}
+
+.news_section {
+	border-left: 10px solid #999;
+	padding-left: 10px;
+}
+
+.content_left_section p {
+	text-align: justify;
+}
+
+.news_date {
+	font-size: 12px;
+	font-weight: bold;
+	color: #4895c8;
+}
+
+.news_title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #fbb239;
+}
+
+.content_left_section form {
+	padding: 0px;
+	margin: 10px 0 0px 0;
+}
+
+.content_left_section #search_field {
+	padding: 5px 0 0 0;
+	height: 20px;
+	width: 255px;
+	margin-bottom: 10px;
+}
+
+.content_left_section #subscribe_button {
+	float: right;
+	width: 106px;
+ 	height: 36px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: pre;
+	background: url(images/templatemo_button_01.png) no-repeat; 
+	color: #ffffff;
+	border: none;
+}
+
+#content_right .content_right_section {
+	clear: both
+}
+
+.content_right_section p {
+	text-align: justify;
+	padding-bottom: 10px;
+}
+
+#content_right .content_right_280_section {
+	float: left;
+	width: 280px;
+}
+
+.content_right_280_section .image_wrapper {
+	background: #333;
+	padding: 9px;
+	margin-bottom: 10px;
+}
+
+.content_right_280_section .image_wrapper img {
+	border: 1px solid #ffffff;
+}
+
+.content_right_280_section ul {
+	margin: 10px 0 0 0;
+	padding: 0px;
+}
+
+.content_right_280_section ul li {
+	border-left: 5px solid #999;
+	padding: 0 0 0 10px;
+	margin-bottom: 10px;
+	list-style:none;
+}
+
+.content_right_w620_wrapper {
+	border: 1px solid #000;
+}
+
+.content_right_w620_inner {
+	padding: 30px 28px;
+	color: #ffffff;
+	background: #333;
+	border: 1px solid #666;
+}
+
+.content_right_w620_inner .image_wrapper {
+	border: 1px solid #ffffff;
+	background: #cccccc;
+	padding: 4px;
+	margin-bottom: 5px;
+}
+
+.image_wrapper img {
+	border: none;
+}
+
+.box_w170 {
+	float: left;
+	width: 170px;
+}
+/* end of content right */
+
+/* footer */
+#templatemo_footer_wrapper {
+	clear: both;
+	width: 100%;
+	height: 80px;
+	margin: 0 auto;
+	background: url(images/templatemo_footer.jpg) repeat-x;
+}
+
+#templatemo_footer {
+	width: 980px;
+	padding: 30px 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #CCC;
+}
+
+#templatemo_footer a {
+	color: #FFF;
+	font-weight: bold;
+}
+/* end of footer */
