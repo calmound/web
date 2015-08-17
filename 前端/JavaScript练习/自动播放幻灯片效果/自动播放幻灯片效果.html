@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,ul,li,div{margin: 0;padding: 0;}
+body{font-family: arial;background: black;}
+a{text-decoration: none;}
+li{list-style: none;}
+#outer{margin: 10px auto;width: 450px;height: 230px;background: #fff;border-radius: 10px;position: relative;}
+#show{margin: 0 auto;}
+#show img{width: 430px;height: 210px;margin: 10px 10px;}
+#outer ul{position: absolute;right: 15px;bottom: 17px;}
+#outer li{float: left;margin-left: 5px;}
+#outer li a{padding:2px 6px 2px 5px;background: #E8C33A;line-height: 4px;border-radius: 20px;color: #fff;font-size: 14px;}
+#outer li a:hover,#outer li .active{background: #E39229}
+</style>
+<script>
+  window.onload = function()
+  {
+  	 var arr = new Array('1.jpg','2.jpg','3.jpg','4.jpg','5.jpg');
+  	 var oOuter = document.getElementById('outer');
+  	 var oShow = document.getElementById('show');
+  	 var oImg = oShow.getElementsByTagName('img')[0];
+  	 var oUl = oOuter.getElementsByTagName('ul')[0];
+  	 var oLi = oUl.getElementsByTagName('li');
+  	 var num = 0;
+  	 var play = null;
+
+  	 for(var i=0;i<oLi.length;i++)
+  	 {
+  	 	oLi[i].index = i;
+  	 	oLi[i].onmouseover = function()
+  	 	{//清空选中的li
+  	 		for(var j=0;j<oLi.length;j++)
+  	 		{
+  	 			var oA = oLi[j].getElementsByTagName('a')[0];
+  	 			oA.className = '';
+  	 		}
+  	 		var oA = oLi[this.index].getElementsByTagName('a')[0];
+  	 		oA.className = 'active';
+  	 		oImg.src = 'images/' + arr[this.index];
+  	 		num = this.index;
+  	 	}
+  	 }
+  	 oOuter.onmouseover = function()
+  	 {
+  	 	clearInterval(play);
+  	 }
+  	 oShow.onmouseout = function()
+  	 {
+  	 	autoPlay();
+  	 }
+  	 function autoPlay()
+  	 {
+  	 		play = setInterval(function(){
+  	 		num++;
+  	 		if(num==5) num=0;
+  	 		for(var j=0;j<oLi.length;j++)
+  	 		{
+  	 			var oA = oLi[j].getElementsByTagName('a')[0];
+  	 			oA.className = '';
+  	 		}
+  	 		var oA = oLi[num].getElementsByTagName('a')[0];
+  	 		oA.className = 'active';
+  	 		oImg.src = 'images/' + arr[num];
+  	 	},1000);
+  	 };
+  	 autoPlay();
+  }
+</script>
+</head>
+<body>
+   <div id="outer">
+	  <div id="show">
+	  	 <img src="images/1.jpg" />
+	  </div>
+	  <ul>
+	  	<li><a href="#" class="active">1</a></li>
+	  	<li><a href="#">2</a></li>
+	  	<li><a href="#">3</a></li>
+	  	<li><a href="#">4</a></a></li>
+	  	<li><a href="#">5</a></li>
+	  </ul>
+   </div>
+</body>
+</html>
