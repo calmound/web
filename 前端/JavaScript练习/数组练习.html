@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#outer{}
+#outer div{width: 800px;height: 45px;}
+#outer input{margin-left: 20px;margin-right: 20px;}
+#outer .active{margin-bottom:10px;}
+#outer span{color: red;font-size: 30px;}
+
+</style>
+<script>
+  window.onload = function()
+  {
+  	 var a = [1,2,3,4,5,6,7,8,9];
+     var oInput = document.getElementsByTagName('input');
+     var oSpan = document.getElementsByTagName('span')[0];
+     var num = 9;
+     for(var i=0;i<oInput.length;i++)
+     {
+        oInput[i].index = i;
+        oInput[i].onclick = function()
+        {
+            var index =  this.index;
+            switch(index)
+            { 
+               case 0:oSpan.innerHTML = a.valueOf();break;
+               case 1:oSpan.innerHTML = a.toString();break;
+               //push()
+               case 2:num++;a.push(num);oSpan.innerHTML = a.valueOf();break;
+               //pop()
+               case 3:num = a.pop() - 1;oSpan.innerHTML = a.valueOf();break;
+               case 4:oSpan.innerHTML = a.join('|');break;
+               case 5:oSpan.innerHTML = a.reverse();break;
+               case 6:a.shift();oSpan.innerHTML = a.valueOf();break;
+               case 7:num++;a.unshift(num);oSpan.innerHTML = a.valueOf();break;
+
+            }
+        }
+     }
+     sort();
+  }
+</script>
+</head>
+<body>
+<div id="outer">
+<div class="active">展示：<span>1,2,3,4,5,6,7,8,9</span></div>
+<div><input type="button" value="valueOf"/></div>返回数组的所有值valueOf
+<div><input type="button" value="toString"/></div>将数组以字符窜的形式返回
+<div><input type="button" value="push()"/></div>向数组中添加末尾元素值
+<div><input type="button" value="pop()"/></div>删除数组末尾元素
+<div>
+   <input type="button" value="分隔符'|' join()"/>以参数作为分隔符，将所有数组成员组成一个字符串返回join()
+</div>
+<div>
+  
+  <input type="button" value="reverse()"/><span></span>将数组翻转reverse()
+</div>
+<div>
+  <input type="button" value="shift()"/></div>删除数组的第一个元素 
+<div>数组头部添加元素
+  <input type="button" value="unshift()"/>
+</div>
+<div>
+  slice方法返回指定位置的数组成员组成的新数组，原数组不变。它的第一个参数为起始位置（从0开始），第二个参数为终止位置（但该位置的元素本身不包括在内）。如果省略第二个参数，则一直返回到原数组的最后一个成员。<span></span>
+</div>
+<div>splice方法用于删除元素，并可以在被删除的位置添加入新的数组元素。它的返回值是被删除的元素。需要特别注意的是，该方法会改变原数组。splice的第一个参数是删除的起始位置，第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素。</div>
+</div>
+</body>
+</html>
