@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#outer{margin: 0 auto;width: 250px;height: 100px;}
+</style>
+<script>
+  window.onload = function()
+  {
+  	 var oInput = document.getElementsByTagName('input');
+  	 var oSpan = document.getElementsByTagName('span')[0];
+  	 oInput[2].onclick = function()
+  	 {
+
+  	 	var num = parseInt(oInput[0].value)  + parseInt(oInput[1].value);
+  	 	oSpan.innerHTML = num;
+  	 }
+  }
+</script>
+</head>
+<body>
+<div id="outer">
+	<input type="text" style="width: 50px;" />
+	+
+	<input type="text"  style="width: 50px;"/>
+	=
+	<span>?</span>
+	<input type="button" value="求和" />
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{font-size: 12px;}
+p{margin: 0;padding: 0;}
+#outer{width: 200px;height: 200px;margin: 0 auto;}
+#outer div{background: lightgoldenrodyellow;padding: 5px 5px 5px 2px;border: 1px solid yellow;display: none;}
+
+</style>
+<script>
+    window.onload = function () {
+        var oSpan = document.getElementsByTagName("span")[0];
+        var oDiv  = document.getElementById('outer').getElementsByTagName('div')[0];
+        oSpan.onmouseover = function () {
+            oDiv.style.display = 'block';
+        }
+        oSpan.onmouseout = function () {
+            oDiv.style.display = 'none';
+        }
+    }
+</script>
+</head>
+<body>
+   <div id="outer">
+       <span><input type="checkbox" >两周内自动登陆</span>
+       <div><p>为了你的信息安全，请您不要在网吧进行登陆</p></div>
+   </div>
+</body>
+</html>

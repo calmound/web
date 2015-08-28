@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function setText()
+{
+	var oTxt = document.getElementById('txt1');
+	oTxt.value = 'cba';
+	oTxt.title= 'qqq';
+}
+</script>
+<style>
+#myDiv{margin: 0 auto;width: 300px;height: 20px;}
+</style>
+</head>
+
+<body>
+<div id="myDiv">
+    <input id="txt1" type="text" value='abc'/>
+    <input type="button" value="改文字" onclick="setText()"/>
+</div>
+ </body>
+</html>
