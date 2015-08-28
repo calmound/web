@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#btn{margin: 0 auto 20px;;width: 100px;height: 20px;}
+input{width: 100px;height: 20px;}
+#outer{width: 630px;height: 200px;margin: 0 auto;}
+.div1{margin-right: 10px; float: left; background: red;width: 200px;height: 200px;}
+</style>
+<script>
+    window.onload = function () {
+        var oDiv  = document.getElementById('outer').getElementsByTagName('div');
+        var oBtn = document.getElementsByTagName('input')[0];
+        oBtn.onclick = function () {
+            for(var i=0;i<oDiv.length;i++)
+            {
+                oDiv[i].style.background = 'black';
+            }
+        }
+
+    }
+</script>
+</head>
+<body>
+    <div id="btn"><input type="button"  value="变色"/></div>
+    <div id="outer">
+        <div class="div1"></div>
+        <div class="div1"></div>
+        <div class="div1"></div>
+    </div>
+</body>
+</html>

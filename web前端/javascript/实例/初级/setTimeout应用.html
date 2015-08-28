@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,li,ul,a,div{margin: 0;padding: 0;}
+body{background: #5F5656}
+a{text-decoration: none;}
+li{list-style: none;}
+#outer{width: 612px;margin:10px auto;position: relative;}
+#outer li{float: left;}
+#outer li a{display: block;background: #2BADDE;text-align: center;padding: 10px 0 ;width: 100px;border: 1px solid #fff;}
+#outer li a:hover{background: #8B91EC;}
+#outer ul li .nav{height:20px;position: absolute;margin-top: 5px;}
+#outer ul li span{left: 0;top: 45px;display: none;}
+#outer li span a{float: left;padding: 5px;border: 1px solid #fff;background: #0F9ADA;width:80px;}
+</style>
+<script>
+  window.onload = function()
+  {
+  	 var aOuter = document.getElementById('outer');
+  	 var oUl = aOuter.getElementsByTagName('ul')[0];
+  	 var oLi = oUl.getElementsByTagName('li');
+
+     for(var i=0;i<oLi.length;i++)
+     {
+     	oLi[i].index = i;
+ 		oLi[i].onmouseover = function()
+ 	    {
+ 	    	var oSpan = document.getElementsByTagName('span');
+ 	    	for(var j=0;j<oSpan.length;j++)
+ 	    	{
+ 	    		oSpan[j].style.display = 'none';
+ 	    	}
+ 		    var elemLi = oLi[this.index].getElementsByTagName('span')[0];
+ 		    elemLi.style.display = 'block';
+            
+            //获取li下面的div
+ 		    var oNav = this.getElementsByTagName('div')[0];
+ 		    //如果子导航栏过长，则居右显示
+            if(aOuter.offsetWidth - oNav.offsetLeft == oNav.offsetWidth) 
+            {//右边间距:父导航栏的长度-子导航栏的左间距
+ 					oNav.style.right = 0;
+            } 
+            //停止冒泡    
+            oNav.onmouseover = function(ev)
+            {
+            	var event = ev || event;
+            	event.cancelBubble = true;
+            }
+ 	    }
+ 	    oLi[i].onmouseout = function()
+ 	    {
+ 	    	var index= this.index;
+ 	    	 setTimeout(function(){
+ 	    		 var elemLi = oLi[index].getElementsByTagName('span')[0];
+ 		         elemLi.style.display = 'none';
+ 	    	},500);
+ 	    }
+     }
+  }
+</script>
+</head>
+<body>
+<div id="outer">
+    <ul>
+       <li><a href="">主页</a></li>
+       <li><a href="">程序语言</a>
+       		<div class="nav">
+		    	<span>
+				   <a href="">PHP</a>
+				   <a href="">C++</a>
+				   <a href="">Java</a>
+				   <a href="">JavaScript</a>
+				   <a href="">HTML</a>
+		 		</span>
+		 	</div>
+       </li>
+       <li><a href="">绘画展示</a>
+       	    <div  class="nav">
+	            <span>
+			       <a href="">毕加索</a>
+			       <a href="">莫奈</a>
+			       <a href="">梵高</a>
+			       <a href="">达芬奇</a>
+			       <a href="">齐白石</a>
+			    </span>	
+		    </div>
+       </li>
+       <li><a href="">健康运动</a>
+            <div  class="nav">
+		        <span>
+		   		   <a href="">跑步</a>
+		   		   <a href="">拳击</a>
+		   		   <a href="">篮球</a>
+		   		   <a href="">足球</a>
+		   		   <a href="">腹肌撕裂</a>
+		   		   <a href="">击剑</a>
+		        </span>
+		    </div>
+       </li>
+       <li><a href="">帮助</a></li>
+       <li><a href="">关于</a></li>
+    </ul>
+    </div>
+</body>
+</html>

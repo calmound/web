@@ -1,0 +1,50 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页换肤</title>
+<style>
+ul,li,h2{margin: 0;padding: 0;}
+#outer{margin: 0 auto;width: 200px;border: 1px solid #A5A5A5;}
+#outer h2{background: #D8D8D8;border: 1px solid #fff;font-size: 20px;width: 198px;height: 35px;line-height: 35px;text-indent: 10px;cursor: pointer;}
+#outer ul{background: #EAEAEA;text-indent: 10px;font-size: 13px;display: none;}
+#outer li{list-style: none;padding: 5px 0;}
+</style>
+<link href="green.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    window.onload = function()
+    {
+        var oH2 = document.getElementsByTagName('h2')[0];
+        var oUl = document.getElementsByTagName('ul')[0];
+        var flag =1;
+        oH2.onclick = function()
+        {
+           if(flag== 1)
+           {
+                oUl.style.display = 'block';
+                flag = 0;
+           }
+           else 
+           {
+               oUl.style.display = 'none';
+               flag =1;
+           } 
+        }
+    }
+</script>
+</head>
+<body>
+   <div id="outer">
+     <h2>播放列表...</h2>
+     <ul>
+   	  	<li>玩家之徒 - 蔡依林</li>
+	  	<li>原谅我就是这样的女生 - 戴佩妮</li>
+      	<li>猜不透 - 丁当</li>
+      	<li>自导自演 - 周杰伦</li>
+      	<li>浪漫窝 - 弦子</li>
+      	<li>流年 - 王菲</li>
+   	 </ul>
+   </div>
+</body>
+</html>

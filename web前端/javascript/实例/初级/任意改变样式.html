@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#outer{width: 280px;height: 800px;margin: 0 auto;}
+.txt{width: 200px;height: 25px;margin-bottom: 10px;}
+#inner{width: 300px;height: 300px;background: blue;margin-top: 10px;}
+</style>
+<script>
+      var changeStyle = function (attr,value) {
+          var oDiv  = document.getElementById('inner');
+          // oDiv.style.attr = value ;
+          oDiv.style[attr] = value ;
+      }
+      window.onload = function () {
+          var inputs = document.getElementsByTagName('input');
+
+          inputs[2].onclick = function(){
+              changeStyle(inputs[0].value,inputs[1].value);
+          }
+          inputs[3].onclick = function () {
+              changeStyle('background','blue');
+          }
+      }
+</script>
+</head>
+<body>
+   <div id="outer">
+         属性名:<input type="text" value="background" class="txt"/>
+         样式名:<input type="text" value="blue" class="txt"/>
+         <input type="button" value="确认" style="width:50px;height: 30px;" />
+         <input type="button" value="重置" style="width:50px;height: 30px;" />
+         <div id="inner"></div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页换肤</title>
+<style>
+body{font-family: arial;}
+li,p,ul{margin: 0;padding: 0;}
+#outer{margin: 0 auto;width: 570px;height: 290px;border: 1px solid black;}
+h3{text-align: center;}
+ul{list-style: none;zoom:1;}
+li{position: relative; float: left;width: 100px;height: 100px;border: 1px solid black;margin: 0 0 10px 10px;font-size: 14px;background: #C4C0C0;}
+p{font-weight: bold;margin: 10px 0px 5px 10px;}
+span{margin-left: 10px;}
+img{display: none;position: absolute;top: -12px;left: -12px;border: 2px solid #7F7F7F;cursor: crosshair;}
+.zindex{z-index: 1}
+</style>
+<link href="green.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    window.onload = function()
+    {
+       var arr = new Array("images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg","images/6.jpg","images/7.jpg","images/8.jpg","images/9.jpg","images/10.jpg");
+       var oLi = document.getElementsByTagName('li');
+       var oImg = document.getElementsByTagName('img');
+       for(var i=0;i<oLi.length;i++)
+       {
+          oLi[i].index = i;
+          oLi[i].onmouseover = function()
+          {
+              oImg[this.index].style.display = 'block';
+              oImg[this.index].className = 'zindex';
+          }
+          oLi[i].onmouseout = function()
+          {
+              oImg[this.index].style.display = 'none';
+          }
+       } 
+    }
+</script>
+</head>
+<body>
+    <div id="outer">
+        <h3>名车车标展示-鼠标移过显示车标</h3>
+        <ul>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/1.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/2.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/3.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/4.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/5.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/6.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/7.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/8.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/9.jpg" /></li>
+          <li><p>BMW</p><span>宝马汽车</span><img src="images/10.jpg" /></li>
+        </ul>
+    </div>
+    使用position：absolute 和z-index让图标在最上层
+</body>
+</html>
