@@ -1,0 +1,25 @@
+#wrap{}
+.comWidth{width:1226px;margin: 0 auto;}
+
+
+.topbar{background: #333;height: 40px;margin-bottom: 10px;}
+
+.topbar .leftArea li{float: left;}
+.topbar .leftArea a{color: #b0b0b0;font-size: 12px;line-height: 40px;}
+.topbar .leftArea a:hover{color: #fff;}
+.topbar .leftArea .sep{line-height: 35px;color: #424242;width: 16px;display: inline-block;margin: 0 auto;text-align: center;}
+.topbar .rightArea{float: right;}
+.topbar .rightArea a{color: #b0b0b0;font-size: 12px;line-height: 40px;display: inline-block;}
+.topbar .rightArea .sep{line-height: 35px;color:#424242;width: 10px;text-align: center;}
+.topbar .buy_car{background: #424242; width: 120px;height: 40px; margin-left: 20px;position: relative;}
+.topbar .buy_car i{background: url(../images/);}
+
+
+.container{}
+
+.nav{}
+.nav .logo{}
+.nav .nav_list{}
+.nav .nav_list li{float:left;}
+.nav .nav_list a{color: #333;font-size: 16px;}
+.nav .nav_list a:hover{color: #ff6700;}

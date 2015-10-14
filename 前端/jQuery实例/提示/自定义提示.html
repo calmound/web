@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-1.11.3.min.js" type="text/javascript" ></script>
+<title></title>
+<style>
+body{margin: 0;padding: 0;}
+#tip{
+	background:#DEEC2B;
+    border:1px solid #000;
+    position: absolute;
+}
+</style>
+<script>
+	$(function(){
+        var x = 10;
+        var y = 10;
+        $("a.tooltip").mouseover(function(e){
+            this.myTitle = this.title;
+            this.title = "";//将默认title属性赋予空值
+            var tip = "<div id='tip'>"+this.myTitle+"</div>";
+            $("body").append(tip);
+            $("#tip").css({
+                "left" : e.pageX + x + "px",
+                "top"  : e.pageY + y + "px" 
+            })
+        }).mousemove(function(e){
+            $("#tip").css({
+                "left" : e.pageX + x + "px",
+                "top"  : e.pageY + y + "px"
+            });
+        }).mouseout(function(){
+            $("#tip").remove();
+            this.title = this.myTitle;
+        });
+    });
+</script>
+</head>
+<body>
+	<p><a href="#" title="自定义提示" class="tooltip">提示1</p>
+	<p><a href="#" title="自定义提示" class="tooltip">提示1</p>
+	<p><a href="#" title="提示" >提示1</p>
+	<p><a href="#" title="提示" >提示1</p>
+</body>
+</html>
