@@ -23,3 +23,20 @@
 .nav .nav_list li{float:left;}
 .nav .nav_list a{color: #333;font-size: 16px;}
 .nav .nav_list a:hover{color: #ff6700;}
+
+
+.spec_item{width: 234px;height: 340px;background: #fff;padding-top: 39px;margin-right: 14px;
+}
+.spec_img{width: 160px;height: 160px;display:block;margin: 0 auto;}
+.spec_img img{width: 160px;height: 160px;}
+.spec_title{}
+.spec_desc{}
+.spec_money{}
+
+.star_spec{width: }
+.star_spec .spec_item{background: #FAFAFA;}
+.star_spec h2{}
+.star_spec li{float: left;}
+.star_spec li a{}
+.spec_top_border1{border-top: 1px solid #ffac13;}
+.spec_top_border2{border-top: 1px solid #ffac13;}

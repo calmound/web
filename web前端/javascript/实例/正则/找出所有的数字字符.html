@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+
+</style>
+<script>
+window.onload = function()
+{
+	var str ="d123sajk54ieiqw932849jksnkn33c3489789";
+	
+
+	function findNum(str)
+	{
+		var tmp = "";
+		for(var i=0;i<str.length;i++){
+			if(str.charAt(i)<='9' && str.charAt(i)>='0')
+			{
+					tmp += str.charAt(i);
+			}
+		}
+		return tmp;
+	};
+	alert(findNum(str)); //
+}
+</script>
+</head>
+<body>
+   
+</body>
+</html>
