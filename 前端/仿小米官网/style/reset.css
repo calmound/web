@@ -3,5 +3,7 @@ body{font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino 
 a{text-decoration: none;}
 li{list-style: none;}
 
+select,input,textarea{outline: none;border:none;background: none;}
+
 .fl{float: left;}
 .fr{float: right;}

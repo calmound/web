@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="move.js"></script>
+<style>
+#div1{width: 520px;height: 280px;border: 1px solid #000;margin: 100px auto 0;position: relative;overflow: hidden;}
+#ul1{position: absolute;left: 0;top: 0;margin: 0;padding: 0;}
+li{list-style: none;float: left;}
+img{display: block;}
+#div1 p{text-align: center;position: absolute;width: 100%;bottom: 10px;}
+#div1 p span{padding: 1px 10px;background: #ccc;border-radius:50%;margin-left: 5px;cursor: pointer;}
+#div1 p span.current{background: #F90;}
+</style>
+<script>
+window.onload = function(){
+       var oDiv = document.getElementById('div1');
+       var oUl = document.getElementById('ul1');
+       var aLi = oUl.getElementsByTagName('li');
+       var aSpan = oDiv.getElementsByTagName('span');
+       var iLen = aLi.length;
+       var iWidth = aLi[0].offsetWidth;
+
+       oUl.style.width = iLen * iWidth + 'px';
+
+       for(var i = 0;i<iLen;i++){
+         aSpan[i].index = i;
+         aSpan[i].onclick = function(){
+
+            for(var i = 0;i<iLen;i++){
+                aSpan[i].className = '';
+            }
+            
+            this.className = 'current';
+
+//            oUl.style.left = - this.index * iWidth + 'px';
+
+            startMove(oUl,{
+               left : - this.index * iWidth
+            });
+         }
+       }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <div id="div1">
+        <ul id="ul1">
+          <li><img src="images/1.png" /></li>
+          <li><img src="images/2.jpg" /></li>
+          <li><img src="images/3.jpg" /></li>
+          <li><img src="images/4.jpg" /></li>
+          <li><img src="images/5.jpg" /></li>
+          <li><img src="images/6.jpg" /></li>
+        </ul>
+        <p>
+          <span class="current"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+    </div>
+</body>
+</html>

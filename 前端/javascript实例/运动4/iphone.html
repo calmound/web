@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iPhone手机图片查看器 - 妙味课堂 - www.miaov.com</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+window.onload = function(){
+	var oUl = document.getElementById('ul1');
+    var aLi = oUl.getElementsByTagName('li');
+
+    var disX = 0;
+    var downX = 0;
+    var iNow = 0;
+    var timer = null;
+
+    oUl.onmousedown = function(ev){
+        var ev = ev || window.event;
+        disX = ev.clientX - oUl.offsetLeft;
+        downX = ev.clientX;
+        
+
+        document.onmousemove = function(ev){
+            var ev = ev || window.event;
+            oUl.style.left = ev.clientX - disX + 'px';
+        }
+        document.onmouseup = function(ev){
+            document.onmousemove = null;
+            document.onmouseup = null;
+            var ev = ev || ev.event;
+            if(ev.clientX > downX){
+
+            }else{
+                if(iNow<aLi.length -1) iNow++;
+                startMove(- iNow * aLi[0].offsetWidth);
+             }
+        }
+        return false;
+    }
+
+    function startMove(iTarget){
+        clearInterval(timer);
+        timer = setInterval(function(){
+            iSpeed += (iTarget - oUl.offsetLeft ) /6;
+        iSpeed *= 0.75;
+
+        if(Math.bas(iSpeed<=1) && Math.abs(iTarget - oUl.offsetLeft<=1))    
+        })
+    }
+};
+</script>
+</head>
+
+<body>
+
+<div id="iphone" >
+	<div id="wrap">
+		<ul id="ul1">
+			<li style="background:url(images/pic1.png);" title="妙味课堂"></li>
+			<li style="background:url(images/pic2.png);" title="妙味课堂"></li>
+			<li style="background:url(images/pic3.png);" title="妙味课堂"></li>
+			<li style="background:url(images/pic4.png);" title="妙味课堂"></li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

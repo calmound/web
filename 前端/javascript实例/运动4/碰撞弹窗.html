@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 100px;background: red;position: absolute;}
+.box{border: 1px solid #000;position: absolute;}
+</style>
+<script>
+window.onload = function(){
+    var oDiv = document.getElementById('div1');
+    var disX = 0;
+    var disY = 0;
+
+    var prevX = 0;
+    var prevY = 0;
+    var iSpeedX = 0;
+    var iSpeedY = 0;
+
+    var timer = null;
+    
+    oDiv.onmousedown = function(ev){
+        var ev = ev || window.event;
+        disX = ev.clientX - oDiv.offsetLeft;
+        disY = ev.clientY - oDiv.offsetTop;
+       
+        prevX = ev.clientX;
+        prevY = ev.clientY;
+
+
+        document.onmousemove = function(ev){
+          var ev = ev || window.event;
+          oDiv.style.left = ev.clientX - disX + 'px';
+          oDiv.style.top = ev.clientY - disY + 'px';
+
+          iSpeedX = ev.clientX - prevX;
+          iSpeedY = ev.clientY - prevY;
+         
+          prevX = ev.clientX;
+          prevY = ev.clientY;
+        }
+        document.onmouseup = function(){
+           document.onmousemove = null;
+           document.onmouseup = null;
+           startMove();
+        }
+        return false;
+    }
+
+    function startMove(){
+       clearInterval(timer);
+       timer = setInterval(function(){
+
+          iSpeedY += 3;
+
+          var L = oDiv.offsetLeft + iSpeedX;
+          var T = oDiv.offsetTop + iSpeedY;
+
+          if(T>document.documentElement.clientHeight - oDiv.clientHeight){
+             T = document.documentElement.clientHeight - oDiv.clientHeight;
+             iSpeedY *= -1;
+             iSpeedY *= 0.75;
+             iSpeedX *= 0.75;
+          }else if(T < 0){
+            T = 0;
+            iSpeedY *= -1;
+            iSpeedY *=0.75;
+          }
+
+          if(L >document.documentElement.clientWidth - oDiv.clientWidth){
+             L = document.documentElement.clientWidth - oDiv.clientWidth;
+             iSpeedX *= -1;
+             iSpeedX *= 0.75;
+          }else if(L < 0){
+              L = 0;
+              iSpeedX *= -1;
+              iSpeedX *= 0.75;
+          }
+          oDiv.style.left = L +'px';
+          oDiv.style.top = T + 'px';
+       },30);
+    }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
