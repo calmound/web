@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#img1{opacity: 0.3;filter:alpha(opacity=30);width: 500px;height: 300px;position: absolute;left: 300px;}
+#div1{width: 100px;height: 200px;background: red;position: absolute;left: -100px;top: 60px;}
+#div2{width: 30px;height: 60px;background: #000;position: absolute;right: -30px;top: 70px;color:#fff; text-align: center;}
+</style>
+<script>
+window.onload = function(){
+   var oImg = document.getElementById('img1');
+   var oDiv = document.getElementById('div1');
+
+   oImg.onmouseover = function(){
+        startMove(this,'opacity',100,10);
+   }
+   oImg.onmouseout = function(){
+        startMove(this,'opacity',30,-10);
+   }
+   oDiv.onmouseover = function(){
+        startMove(this,'left',0,10);
+   }
+   oDiv.onmouseout = function(){
+        startMove(this,'left',-100,-10);
+   }
+
+   function startMove(obj,attr,iTarget,iSpeed){
+        var iCur = 0;
+        clearInterval(obj.iTimer); 
+        obj.iTimer = setInterval(function(){
+            if(attr == 'opacity'){
+                iCur = Math.round(css(obj,'opacity') * 100);
+              }else{
+                iCur = oDiv.offsetLeft; 
+              }
+            if(iTarget == iCur){
+                clearInterval(obj.iTimer);
+            }else{
+                if(attr == 'opacity'){
+                    obj.style.opacity = (iSpeed + iCur) /100;
+                    obj.style.filter = 'opacity(filter='+(iCur+iSpeed)+')';
+                }else{
+                    obj.style.left = iCur + iSpeed + 'px';
+                }
+               
+            }
+        },30);
+   }
+   function css(obj,attr){
+        if(obj.currentStyle[attr]){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,false)[attr];
+        }
+   }
+}
+
+
+  
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <img src="1.jpg" id="img1" />
+    <div id="div1">
+      <div id="div2">分享到</div>
+    </div>
+</body>
+</html>

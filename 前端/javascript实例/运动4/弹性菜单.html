@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+*{margin:0;padding: 0;}
+#ul1{width: 428px;height: 30px;margin: 20px auto;position: relative;}
+#ul1 li{width: 100px;height: 30px;background: red;border: 1px #000 solid;margin-right: 5px;float: left;list-style: none;line-height: 30px;text-align: center;}
+#ul1 #mark{position: absolute;left: 0;top: 0;overflow: hidden;}
+#ul1 #mark ul{position: absolute;left: -1px;top: -1px;height: 30px;width: 428px;color: white;}
+
+</style>
+<script>
+window.onload = function(){
+   var oMark = document.getElementById('mark');
+   var aBox = document.getElementsByClassName('box');
+
+   var childUl = oMark.getElementsByTagName('ul')[0];
+
+   var iSpeed = 0;
+   var timer = null;
+   var timer2 = null;
+
+   for(var i = 0 ;i<aBox.length;i++){
+        aBox[i].onmouseover = function(){
+            clearTimeout(timer2);
+            startMove(this.offsetLeft);
+        }
+        aBox[i].onmouseout = function(){
+            timer2 = setTimeout(function(){
+                   startMove(0);
+               },100);
+         
+        };
+   }
+
+   oMark.onmouseover = function(){
+        clearTimeout(timer2);
+   };
+
+   oMark.onmouseout = function(){
+        timer2 = setTimeout(function(){
+            startMove(0);
+        },100);
+   };
+
+   function startMove(iTarget){
+        clearInterval(timer);
+        timer = setInterval(function(){
+
+            iSpeed += (iTarget - oMark.offsetLeft)/6;
+            iSpeed *= 0.75;
+
+            if(Math.abs(iSpeed) <= 1 && Math.abs(iTarget-oMark.offsetLeft)<=1){
+                clearInterval(timer);
+                oMark.style.left = iTarget + 'px';
+                childUl.style.left = -iTarget + 'px';
+                iSpeed = 0;
+            }else{
+                oMark.style.left = oMark.offsetLeft + iSpeed + 'px';
+                childUl.style.left = -oMark.offsetLeft + 'px';
+            }
+        },30);
+   }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li id="mark">
+            <ul>
+                <li>首页</li>
+                <li>论坛</li>
+                <li>视频</li>
+                <li>留言</li>
+            </ul>
+        </li>
+        <li class="box">首页</li>
+        <li class="box">论坛</li>
+        <li class="box">视频</li>
+        <li class="box">留言</li>
+    </ul>
+</body>
+</html>

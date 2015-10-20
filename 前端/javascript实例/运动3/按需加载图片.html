@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#ul1{margin: 100px auto 0 ;padding: 0;}
+li{float: left;list-style: none;border: 1px solid #000;
+margin: 0 0 10px 10px;}
+img{width: 400px;height: 200px;display: block;}
+</style>
+<script>
+window.onload= function(){
+     var oUl = document.getElementById('ul1');
+     var aImg = oUl.getElementsByTagName('img');
+
+     showImage();
+
+     window.onscroll = showImage;
+
+     function showImage(){
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        for(var i= 0;i<aImg.length;i++){ 
+            if(!aImg[i].isLoad && getTop(aImg[i]) < scrollTop + document.documentElement.clientHeight){
+                aImg[i].src = aImg[i].getAttribute('_src');
+                aImg.isLoad = true;
+            }
+        }
+     }
+
+     function getTop(obj){
+        var iTop = 0;
+        while(obj){
+            iTop += obj.offsetTop ; 
+            obj = obj.offsetParent;
+        }
+        return iTop;
+     }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+        <li><img _src="images/1.png" /></li>
+        <li><img _src="images/2.jpg" /></li>
+        <li><img _src="images/3.jpg" /></li>
+        <li><img _src="images/4.jpg" /></li>
+        <li><img _src="images/5.jpg" /></li>
+        <li><img _src="images/6.jpg" /></li>
+    </ul>
+</html>

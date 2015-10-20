@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+</style>
+<script>
+window.onload= function(){
+     var oImg = document.getElementById('img1');
+     var oImage = new Image();
+
+     var arr = [
+        'http://pic.nipic.com/2007-11-09/2007119122519868_2.jpg',
+        'http://image.photophoto.cn/nm-6/018/030/0180300244.jpg',
+        'http://img.taopic.com/uploads/allimg/130501/240451-13050106450911.jpg',
+        'http://pica.nipic.com/2007-11-09/200711912453162_2.jpg'
+     ];
+
+     
+     var iCur = 0;
+     var i = 0;
+     Yuzai();
+
+     oImg.onclick = function(){
+           i++;
+           if(i < arr.length){
+               oImg.src = arr[i];
+           } 
+     }
+     
+     
+     function Yuzai(){
+        oImage.src = arr[iCur];
+        oImage.onload = function(){
+            iCur ++ ;
+            if(iCur < arr.length){
+                Yuzai();
+            }
+            document.title = iCur + '/' + arr.length ;
+        }
+     }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <img src="http://pic.nipic.com/2007-11-09/2007119121849495_2.jpg" id="img1" style="width:300px;height:400px;" />
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 100px;background: red;position: absolute;left: 200px;top: 60px;}
+</style>
+<script>
+window.onload = function(){
+   var oDiv = document.getElementById('div1');
+
+   oDiv.onclick = function(){
+        startMove(this,{
+          width:200,
+        },10,function(){
+            startMove(this,{
+              height:200,
+          },10)
+        });
+   }
+   
+   function startMove(obj,json,iSpeed,fn){
+        clearInterval(obj.iTimer);
+        var iCur = 0;
+        var Flag = true;   
+          obj.iTimer = setInterval(function(){
+             for(var attr in json){
+                var iTarget = json[attr];
+                if(attr == 'opacity'){
+                    iCur = Math.round(css(obj,'opacity') * 100);
+                }else{
+                    iCur = parseInt(css(obj,attr)); 
+                }
+                if(iTarget != iCur){
+                    Flag = false;
+                    if(attr == 'opacity'){
+                        obj.style.opacity = (iSpeed + iCur) /100;
+                        obj.style.filter = 'opacity(filter='+(iCur+iSpeed)+')';
+                    }else{
+                        obj.style[attr] = iCur + iSpeed + 'px';
+                    }   
+                }
+            }
+            if(Flag){
+               clearInterval(obj.iTimer);
+               fn && fn.call(obj);
+            }
+          },30);   
+   }      
+   function css(obj,attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,false)[attr];
+        }
+   }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <div id="div1">
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 100px;background: red;position: absolute;}
+</style>
+<script>
+window.onload = function(){
+   var oInput = document.getElementById('btn');
+   var oDiv = document.getElementById('div1');
+
+   var timer = null;
+   var iSpeed = 0;
+
+   oInput.onclick = function(){
+        startMove();   
+   }
+   function startMove(){
+      clearInterval(timer);
+
+      timer = setInterval(function(){
+           iSpeed += 3;
+           var T = oDiv.offsetTop + iSpeed;
+           if(T > document.documentElement.clientHeight - oDiv.offsetHeight){
+                T = document.documentElement.clientHeight - oDiv.offsetHeight;
+                iSpeed *= -0.75;
+            }
+           oDiv.style.top = T + 'px'; 
+      },30)
+   }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <input type="button" value="运动" id="btn" />
+    <div id="div1"></div>
+</body>
+</html>

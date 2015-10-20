@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="move.js"></script>
+<style>
+#ul1{margin: 0;position: absolute;right: 10px;top: 8px;
+width: 700px;height: 500px;border: 1px solid #000;padding: 10px;overflow: hidden;}
+li{line-height: 28px;border-bottom: 1px dotted #000;list-style: none;word-break:break-all;overflow: hidden;}
+</style>
+<script>
+window.onload= function(){
+    var oContent = document.getElementById('content');
+    var oBtn = document.getElementById('btn');
+    var oUl = document.getElementById('ul1');
+
+    oBtn.onclick = function(){
+        var oLi = document.createElement('li');
+        oLi.innerHTML = oContent.value;
+
+        if(oUl.children[0]){
+            oUl.insertBefore(oLi,oUl.children[0]);
+        }else{
+            oUl.appendChild(oLi);
+        }
+
+        var iHeight = parseInt(css(oLi,'height'));
+        oLi.style.opacity = 0;
+        oLi.style.filter = 'alpha(opacity=0)';
+        oLi.style.height = 0;
+
+        startMove(oLi,{
+            height:iHeight,
+            opacity:100
+        });
+    }
+}
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <textarea rows="10" cols="50" id="content"></textarea>
+    <input type="button" value="留言" id="btn">
+    <ul id="ul1"></ul>
+</body>
+</html>
