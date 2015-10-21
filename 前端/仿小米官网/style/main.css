@@ -1,4 +1,4 @@
-#wrap{}
+#wrap{padding-bottom: 40px;}
 .comWidth{width:1226px;margin: 0 auto;overflow: hidden;}
 
 
@@ -58,13 +58,13 @@ margin-left: 7px;}
 .spec_img{width: 160px;height: 160px;display:block;margin: 0 auto;}
 .spec_img img{width: 160px;height: 160px;}
 .spec_type_title{margin-top: 50px;font-weight: normal;font-size: 22px;color: #333;}
+.spec_title{text-align: center;}
 .spec_title a{color: #212121;font-size: 14px;font-weight: normal;}
 .spec_desc{text-align: center;font-size: 12px;color: #b0b0b0;}
 .spec_money{text-align: center;color: #ff6709;}
 
 .star_spec{width: 2480px; }
 .star_spec .spec_item{background: #FAFAFA;}
-.star_spec .spec_title{text-align: center;}
 .star_spec li{float: left;}
 .star_spec li a{}
 .spec_top_border1{border-top: 1px solid #ffac13;}
@@ -73,3 +73,8 @@ margin-left: 7px;}
 .spec_top_border4{border-top: 1px solid #e53935;}
 .spec_top_border5{border-top: 1px solid #00c0a5;}
 
+
+.main_spec{background: #F5F5F5;}
+.hareware_main{background: red;}
+.hardware_list{width: 992px;}
+.hardware_list .spec_item{float: left;width: 234px;height: 260px;margin: 0 0 14px 14px;padding: 20px 0; }
