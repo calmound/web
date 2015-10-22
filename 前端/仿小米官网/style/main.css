@@ -78,3 +78,15 @@ margin-left: 7px;}
 .hareware_main{background: red;}
 .hardware_list{width: 992px;}
 .hardware_list .spec_item{float: left;width: 234px;height: 260px;margin: 0 0 14px 14px;padding: 20px 0; }
+
+
+.match{}
+.match_list .spec_item{float: left;margin-bottom: 14px;height: 300px;padding-top: 0;}
+.mr_0 {margin-right: 0;}
+.samll_match_spec{background: #F5F5F5;}
+.small_spec1,.small_spec2{height: 143px;width: 234px;margin-bottom: 14px;background: #fff;position: relative;}
+.small_spec1 img,.small_spec2 img{width: 80px;height: 80px;position: absolute;right: 30px;top: 30px;}
+.small_title{position: absolute;top: 25px;left: 30px;color: #333;}
+.small_money{position: absolute;top: 50px;left: 30px;color: #ff6709;}
+.small_spec2 .small_title{font-size: 18px;top: 40px;left: 20px;}
+.small_spec2 .small_money{font-size: 12px;top: 70px;left: 20px;}
