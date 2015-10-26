@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+#outer{width: 712px;height: 290px;margin: 0 auto;border: 1px solid black;background: ghostwhite;}
+.inner{float: left;border: 1px solid black;margin: 6px;opacity: 0.5;background: red;}
+</style>
+<script>
+ window.onload = function () {
+     var oDiv = document.getElementById('outer').getElementsByTagName('div');
+     for(var i=0;i<oDiv.length;i++) {
+         oDiv[i].onmouseover = function () {
+             this.style.opacity = 1;
+         }
+         oDiv[i].onmouseout = function () {
+             this.style.opacity = 0.5;
+         }
+     }
+ }
+</script>
+</head>
+<body>
+   <div id="outer">
+       <div class="inner"><img src="images/1.jpg" /></div>
+       <div class="inner"><img src="images/2.jpg" /></div>
+       <div class="inner"><img src="images/3.jpg" /></div>
+       <div class="inner"><img src="images/4.jpg" /></div>
+       <div class="inner"><img src="images/5.jpg" /></div>
+       <div class="inner"><img src="images/6.jpg" /></div>
+       <div class="inner"><img src="images/7.jpg" /></div>
+       <div class="inner"><img src="images/8.jpg" /></div>
+       <div class="inner"><img src="images/9.jpg" /></div>
+       <div class="inner"><img src="images/10.jpg" /></div>
+   </div>
+</body>
+</html>
