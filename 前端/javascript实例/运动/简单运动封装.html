@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 200px;background: red;position: absolute;left: -100px;top: 100px;}
+#div2{width: 30px;height: 60px;background: #000;
+position: absolute;right: -30px;top: 70px;color: #fff;text-align: center;}
+</style>
+<script>
+window.onload = function(){
+    var oDiv1 = document.getElementById("div1");
+    var oDiv2 = document.getElementById("div2");
+    var iTimer = null;
+
+    oDiv1.onmouseover = function(){
+        startMove(0,10);
+    }
+
+    oDiv1.onmouseout = function(){
+        startMove(-100,-10);
+    }
+
+   function startMove(iTarget,iSpeed){
+        clearInterval(iTimer);
+            
+        iTimer =setInterval(function(){ 
+            if(oDiv1.offsetLeft == iTarget){
+                clearInterval(iTimer);
+            }else{
+                oDiv1.style.left = oDiv1.offsetLeft + iSpeed + 'px';
+            }
+        },30);
+    }
+}
+
+
+  
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">分享到</div>
+    </div>
+</body>
+</html>

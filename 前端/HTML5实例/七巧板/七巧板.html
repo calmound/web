@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<title>运动</title>
+<body>
+<canvas id="canvas">
+    
+</canvas>
+<script>
+    var tangram = [
+        {p:[{x:0,y:0},{x:800,y:0},{x:400,y:400}],color:"#caff67"},
+        {p:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:"#67beef"},
+        {p:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:"#ef3d61"},
+        {p:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:"#DAD415"},
+        {p:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:"#2E50D5"},
+        {p:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:"#19CDA0"},
+        {p:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:"#2DC61C"}
+    ];
+    window.onload = function(){
+        var canvas = document.getElementById('canvas');
+
+        canvas.width = 800;
+        canvas.height = 800;
+
+        var context = canvas.getContext("2d");
+        for(var i = 0;i<tangram.length;i++){
+            draw(tangram[i],context);
+        }
+    }
+    function draw(piece,cxt){
+        cxt.beginPath();
+        cxt.moveTo(piece.p[0].x,piece.p[0].y);
+        for(var i = 1;i<piece.p.length;i++)
+            cxt.lineTo(piece.p[i].x,piece.p[i].y);
+        cxt.closePath();
+
+        cxt.fillStyle = piece.color;
+        cxt.fill();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,div,a,ul,li{margin: 0;padding: 0;}
+#outer{margin: 0 auto;width: 30px;height: 30px;}
+input{margin-bottom: 5px;}
+#inner{width: 70px;height: 90px;border: 1px solid dodgerblue;display: none;}
+#inner li{height: 30px;line-height: 30px;font-size: 14px;color: dodgerblue;list-style: none;}
+#inner .active{border-top: 1px solid dodgerblue;}
+/* 将a的display置为block，块级元素占据一行，会将你设置的宽高全部填充*/
+#inner a {text-decoration: none;display: block;padding: 0 5px;}
+#inner li a:hover{background: lightskyblue;}
+</style>
+<script>
+    window.onload = function()
+    {
+        var oBtn = document.getElementsByTagName('input')[0];
+        var oDiv = document.getElementsByTagName('ul')[0];
+        var oClose = oDiv.getElementsByTagName('li')[2];
+        oBtn.onclick = function () {
+            oDiv.style.display = oDiv.style.display == 'block'? 'none':'block';
+        }
+        oClose.onclick = function () {
+            oDiv.style.display = 'none';
+        }
+    }
+</script>
+</head>
+<body>
+    <div id="outer"><input type="button" value="输入法" align="center"/>
+        <ul id="inner">
+            <li><a href="#">五笔</a></li>
+            <li><a href="#">拼音</a></li>
+            <li class="active"><a href="#">关闭</a></li>
+        </ul>
+    </div>
+</body>
+</html>

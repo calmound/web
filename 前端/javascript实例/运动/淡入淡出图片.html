@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#img1{opacity: 0.3;filter:alpha(opacity=30);width: 500px;height: 300px;}
+</style>
+<script>
+window.onload = function(){
+    var oImg = document.getElementById("img1");
+    var iTimer = null;
+
+    oImg.onmouseover = function(){
+        startMove(this,100,10);
+    }
+
+    oImg.onmouseout = function(){
+        startMove(this,30,-10);
+    }
+
+   function startMove(obj,iTarget,iSpeed){
+        clearInterval(iTimer);
+        var iCur = 0;
+            
+        iTimer =setInterval(function(){
+            iCur = Math.round(css(obj,'opacity')*100) ;
+            if(iCur == iTarget){
+                clearInterval(iTimer);
+            }else{
+               obj.style.opacity = (iCur + iSpeed) /100;
+               obj.style.filter = 'alpha(opacity = ' +(iCur +iSpeed)+')';
+            }
+        },30);
+    }
+
+    function css(obj,attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,false)[attr];
+        }
+    }
+}
+
+
+  
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <img src="1.jpg" id="img1" />
+</body>
+</html>

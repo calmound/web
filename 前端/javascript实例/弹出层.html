@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,h2{margin: 0;padding: 0;}
+#overlay{position: absolute;top: 0;left: 0; width: 100%;height: 100%;background: gray;filter:alpha(opacity=50);opacity:0.5;display: none}
+#win{width: 500px;height: 300px;background: #fff;position: absolute;top: 50%;left: 50%;margin-top: -180px;margin-left: -250px;display: none;border: 5px solid yellow;}
+#win h2{border-bottom: 5px solid yellow;text-align: right;background: yellowgreen;}
+#win span{background: #fff;}
+</style>
+<script>
+    window.onload = function () {
+        var oInput = document.getElementsByTagName('input')[0];
+        var Overlay = document.getElementById('overlay');
+        var Win = document.getElementById('win');
+        var oSpan = document.getElementsByTagName('span')[0];
+        oInput.onclick = function () {
+            Overlay.style.display = 'block';
+            Win.style.display = 'block';
+        };
+        oSpan.onclick = function () {
+            Overlay.style.display = 'none';
+            Win.style.display = 'none';
+        }
+    }
+</script>
+</head>
+<body>
+  <center><input type="button" value="按钮" /></center>
+  <div id="overlay"></div>
+  <div id="win"><h2><span>×</span></h2></div>
+</body>
+</html>
+

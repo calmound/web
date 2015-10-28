@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 100px;position: absolute;left: 0;top: 0;background: red;}
+#div2{width: 100px;height: 100px;position: absolute;left: 110px;top: 0;background: blue;}
+</style>
+<script>
+window.onload = function(){
+    var d1 = new Drag('div1');
+    d1.init();
+
+    var d2 = new ChildDrag('div2');
+    d2.init();
+}
+
+function Drag(id){
+  this.obj = document.getElementById(id);
+  this.disX = 0;
+  this.disY = 0;
+}
+
+Drag.prototype.init = function(){
+   var This = this; 
+   this.obj.onmousedown = function(ev){
+      var ev = ev || window.event;
+      This.fnDown(ev);
+      document.onmousemove = function(ev){
+          var ev = ev || ev.event;
+          This.fnMove(ev);
+      }
+      document.onmouseup = function(){
+          This.fnUp();
+      }
+   }
+}
+
+Drag.prototype.fnDown = function(ev){
+    this.disX = ev.clientX - this.obj.offsetLeft;
+    this.disY = ev.clientY - this.obj.offsetTop;
+}
+
+Drag.prototype.fnMove = function(ev){
+    this.obj.style.left = ev.clientX - this.disX + 'px';
+    this.obj.style.top = ev.clientY - this.disY + 'px';
+}
+
+Drag.prototype.fnUp = function(){
+    document.onmousemove = null;
+    document.onmouseup = null;
+}
+
+function ChildDrag(id){
+    Drag.call(this,id);
+}
+extend(ChildDrag.prototype,Drag.prototype);
+ChildDrag.prototype.fnMove = function(ev){
+   var x = ev.clientX - this.disX;
+   var y = ev.clientY - this.disY;
+   if(x<0) x = 0;
+   else if (x > document.documentElement.offsetWidth - this.obj.offsetWidth)
+      x = document.documentElement.offsetWidth - this.obj.offsetWidth;
+
+   this.obj.style.left = x + 'px';
+   this.obj.style.top = y + 'px';
+
+}
+function extend(obj1,obj2){
+   for(var attr in obj2){
+      obj1[attr] = obj2[attr];
+   }
+}
+
+  
+
+</script>
+<title>运动</title>
+</head>
+<body>
+   <div id="div1"></div>
+   <div id="div2"></div>
+</body>
+</html>

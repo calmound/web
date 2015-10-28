@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#div1{width: 100px;height: 100px;background: red;
+position: absolute;top: 30px;left: 0;}
+</style>
+<script>
+window.onload = function(){
+    var oBtn = document.getElementById('btn1');
+    var oDiv = document.getElementById("div1");
+    var iTimer = null;
+
+    oBtn.onclick = function(){
+        clearInterval(iTimer);
+        
+        iTimer =setInterval(function(){ 
+            if(oDiv.offsetLeft >= 500){
+                clearInterval(iTimer);
+            }else{
+                oDiv.style.left = oDiv.offsetLeft + 10 + 'px';
+            }
+        },30);
+    }
+}
+  
+
+</script>
+<title>运动</title>
+</head>
+<body>
+    <input type="button" value="动起来" id="btn1" />
+    <div id="div1"></div>
+</body>
+</html>
