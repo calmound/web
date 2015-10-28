@@ -1,6 +1,7 @@
 #wrap{padding-bottom: 40px;}
 .comWidth{width:1226px;margin: 0 auto;overflow: hidden;}
-
+.wrap_inner_top{background: #fff;}
+.wrap_inner_bottom{background: #F5F5F5;}
 
 .topbar{background: #333;height: 40px;margin-bottom: 10px;}
 
@@ -66,14 +67,14 @@ margin-left: 7px;}
 .spec_desc{text-align: center;font-size: 12px;color: #b0b0b0;}
 .spec_money{text-align: center;color: #ff6709;}
 
-.star_spec{width: 2480px; }
+.star_spec,.recommend{width: 2480px; }
 .star_spec .spec_item{background: #FAFAFA;}
-.star_spec li{float: left;}
+.star_spec li,.recommend li{float: left;}
 .star_spec li a{}
-.star_spec .spec_left_right{width: 100px;height: 20px;margin-left:1022px;margin-top: 10px; }
-.star_spec .spec_left_right a{width: 34px;height: 22px;border: 1px solid #e0e0e0;
+.star_spec .spec_left_right,.recommend .spec_left_right{width: 100px;height: 20px;margin-left:1022px;margin-top: 10px; }
+.star_spec .spec_left_right a,.recommend .spec_left_right a{width: 34px;height: 22px;border: 1px solid #e0e0e0;
 display: block;cursor: pointer;}
-.star_spec .spec_left_right img{margin: 4px 0px 0 12px;}
+.star_spec .spec_left_right img,.recommend .spec_left_right img{margin: 4px 0px 0 12px;}
 .spec_top_border1{border-top: 1px solid #ffac13;}
 .spec_top_border2{border-top: 1px solid #83c44e;}
 .spec_top_border3{border-top: 1px solid #83c44e;}
@@ -81,9 +82,9 @@ display: block;cursor: pointer;}
 .spec_top_border5{border-top: 1px solid #00c0a5;}
 
 
-.main_spec{background: #F5F5F5;}
-.main_spec .view_all{margin-top: 10px;}
-.main_spec .view_all:hover{cursor: pointer;}
+
+.hardware .view_all{margin-top: 10px;}
+.hardware .view_all:hover{cursor: pointer;}
 .hareware_main{background: red;}
 .hardware_list{width: 992px;}
 .hardware_list .spec_item{float: left;width: 234px;height: 260px;margin: 0 0 14px 14px;padding: 20px 0; }
