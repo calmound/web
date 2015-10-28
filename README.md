@@ -17,7 +17,6 @@
 - [setTimeout应用](http://calmound.github.io/web/前端/javascript实例/setTimeout应用.html)
 - [鼠标移入改变样式](http://calmound.github.io/web/前端/javascript实例/鼠标移入改变样式.html)
 - [自动播放幻灯片效果](http://calmound.github.io/web/前端/javascript实例/自动播放幻灯片效果/index.html)
-- [自动播放幻灯片效果](http://calmound.github.io/web/前端/javascript实例/自动播放幻灯片效果/index.html)
 - [图片列表改变其透明度](http://calmound.github.io/web/前端/javascript实例/图片列表改变其透明度/index.html)
 
 ### 运动
