@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表格变色</title>
+<script src="jquery.js" type="text/javascript" ></script>
+<style>
+.even{background: #CABD0D;}
+.odd{background: #EEE094;}
+</style>
+<script>
+	$(function(){
+		$('tbody > tr:odd').addClass('odd');
+        $('tbody > tr:even').addClass('even');
+        $('tr:contains("女")').css('background','#3BE2C9');
+	});
+</script>
+
+</head>
+<body>
+	<table>
+        <thead>
+            <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+        </thead>   
+        <tbody>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>女</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+            <tr><td>张三</td><td>男</td><td>北京</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
