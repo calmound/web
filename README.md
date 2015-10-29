@@ -41,17 +41,10 @@
 
 ## jQuery实例
 
-- [多选](http://calmound.github.io/web/jQuery/多选.html)
-- [表格变色](http://calmound.github.io/web/jQuery/表格变色.html)
-- [放大缩小](http://calmound.github.io/web/jQuery/放大缩小.html)
-- [模拟用户点击事件](http://calmound.github.io/web/jQuery/模拟用户点击事件.html)
 
 ## HTML5+CSS3实例
-
 - [倒计时](http://calmound.github.io/web/前端/HTML5+CSS3/倒计时/index.html)
 - [七巧板](http://calmound.github.io/web/前端/HTML5+CSS3/七巧板/index.html)
-- [transition基础](http://calmound.github.io/web/前端/HTML5+CSS3/七巧板/index.html)
 
 ## 综合实例
-
 - [仿小米官网](http://calmound.github.io/web/前端/仿小米官网/index.html)
