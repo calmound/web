@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.js" type="text/javascript" ></script>
+<title>高级事件</title>
+<style>
+  
+</style>
+<script>
+	$(function(){
+        $('#checkRev').click(function(){
+            var flag = true;
+            $('[name=item]:checkbox').each(function(){
+                this.checked = !this.checked;
+                if(this.checked == false) flag = false;
+            });
+
+            $('#checkAll').attr('checked',flag);
+        });
+        $('#checkAll').click(function(){
+                $('input[name=item][type=checkbox]').attr('checked',this.checked);
+        });
+		$('[name=item]:checkbox').click(function(){
+            var flag = true;
+            $('[name=item]:checkbox').each(function(){
+                if(!this.checked){
+                    flag = false;
+                }
+            });
+            $('#checkAll').attr('checked',flag);
+        });
+        $('#send').click(function(){
+            var str = "你选中的是：\r\n";
+            $('[name=item]:checkbox:checked').each(function(){
+                str += $(this).val() + "\r\n";
+            });
+            alert(str);
+        })
+	});
+</script>
+
+</head>
+<body>
+    <input type="checkbox" id="checkAll" />全选/全不选
+    <input type="button" id="checkRev" value="反选" />
+    <br/>
+	篮球<input type="checkbox" value="篮球" name="item" />
+    足球<input type="checkbox" value="足球" name="item" />
+    排球<input type="checkbox" value="排球" name="item" />
+    气球<input type="checkbox" value="气球" name="item" />
+    <input type="button"  id="send" value="提 交" />
+</body>
+</html>

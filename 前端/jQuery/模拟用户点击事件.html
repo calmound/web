@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.js" type="text/javascript" ></script>
+<title>高级事件</title>
+<script>
+	$(function(){
+		$('input').click(function(e,data1,data2,data3,data4){
+			alert('模拟用户'+data4.user+'点击操作'+data1+' '+data2+' '+data3[1]+' ');
+		}).trigger('click',['123','abc',['a','b','c'],{user:'Lee'}]);
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="按钮" />
+</body>
+</html>
