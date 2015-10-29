@@ -43,7 +43,8 @@
 
 
 ## HTML5+CSS3实例
-
+- [倒计时](http://calmound.github.io/web/前端/HTML5+CSS3/倒计时/index.html)
+- [七巧板](http://calmound.github.io/web/前端/HTML5+CSS3/七巧板/index.html)
 
 ## 综合实例
 - [仿小米官网](http://calmound.github.io/web/前端/仿小米官网/index.html)
