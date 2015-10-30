@@ -41,10 +41,10 @@
 
 ## jQuery实例
 
-- [多选](http://calmound.github.io/web/jQuery/多选.html)
-- [表格变色](http://calmound.github.io/web/jQuery/表格变色.html)
-- [放大缩小](http://calmound.github.io/web/jQuery/放大缩小.html)
-- [模拟用户点击事件](http://calmound.github.io/web/jQuery/模拟用户点击事件.html)
+- [多选](http://calmound.github.io/web/前端/jQuery/多选.html)
+- [表格变色](http://calmound.github.io/web/前端/jQuery/表格变色.html)
+- [放大缩小](http://calmound.github.io/web/前端/jQuery/放大缩小.html)
+- [模拟用户点击事件](http://calmound.github.io/web/前端/jQuery/模拟用户点击事件.html)
 
 ## HTML5+CSS3实例
 
