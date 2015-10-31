@@ -108,3 +108,13 @@ display: block;cursor: pointer;}
 .small_spec2 .small_title{font-size: 18px;top: 45px;left: 30px;}
 .small_spec2 .small_money{font-size: 12px;top: 75px;left: 30px;color: #555;}
 .small_spec2 .more{width: 49px;height: 49px;position: absolute;top:45px;right: 40px; }
+
+
+#footer{background: #fff;}
+#footer .footer_top{margin: 0 auto;width: 1226px;}
+#footer .footer_top_service{}
+#footer .footer_top_service li{float: left;width: 243px;}
+#footer .footer_top_service a{display: block;height: 25px;padding-left: 30px;font-size: 16px;
+color: #616161;}
+#footer .footer_service1{background: url(../images/icon/footer_service1.png) no-repeat 0 0;}
+#footer .footer_top_links{}
