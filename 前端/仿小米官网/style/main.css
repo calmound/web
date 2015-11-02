@@ -148,8 +148,8 @@ background: #B0B0B0;margin: 0 auto;border-radius: 6px;}
 
 #footer{background: #fff;}
 #footer .footer_top{margin: 0 auto;width: 1226px;}
-#footer .footer_top_service ul{}
-#footer .footer_top_service li{float: left;width: 243px;border-bottom: 1px solid rgb(224, 224, 224);}
+#footer .footer_top_service{}
+#footer .footer_top_service li{float: left;width: 243px;border-bottom: 1px solid rgb(224, 224, 224);margin-bottom: 20px;}
 #footer .footer_top_service a{display: block;height: 25px;padding-left: 30px;font-size: 16px;
 color: #616161;text-align: center;margin-bottom: 30px;border-right: 1px solid rgb(224, 224, 224);}
 #footer .footer_service1{background: url(../images/icon/footer_service1.png) no-repeat 55px 0;}
@@ -158,3 +158,8 @@ color: #616161;text-align: center;margin-bottom: 30px;border-right: 1px solid rg
 #footer .footer_service4{background: url(../images/icon/footer_service4.png) no-repeat 55px 0;}
 #footer .footer_top_service .footer_service5{background: url(../images/icon/footer_service5.png) no-repeat 55px 0;border:none;}
 #footer .footer_top_links{}
+#footer .links_service{width: 165px;}
+#footer .links_service_title{color: #424242;font-size: 14px;font-weight: normal;}
+#footer .links_service_content{}
+#footer .links_service_content a{color: #757575;font-size: 12px;margin-bottom: 10px;display: block;}
+#footer .links_service_content a:hover{color: #ff6700;}
