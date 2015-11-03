@@ -163,7 +163,13 @@ color: #616161;text-align: center;margin-bottom: 30px;border-right: 1px solid rg
 #footer .links_service_content{}
 #footer .links_service_content a{color: #757575;font-size: 12px;margin-bottom: 10px;display: block;}
 #footer .links_service_content a:hover{color: #ff6700;}
+#footer .links_tel{margin-top: 20px;margin-right: 50px;border-left: 1px solid #e0e0e0;padding-left: 65px;}
+#footer .links_tel_num{color: #ff6700;font-size: 22px;}
+#footer .links_tel_info{width: 140px;text-align: center;font-size: 12px;color: #616161;}
 
 #footer .footer_bottom{background: #fafafa;}
 #footer .footer_bottom{padding: 30px 0;}
+#footer .footer_bottom_img{margin-right: 10px;}
 #footer .footer_bottom_nav li{float: left;}
+#footer .footer_bottom_nav a{color: #757575}
+#footer .footer_bottom_info{color: #b0b0b0;font-size: 12px;}
