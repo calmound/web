@@ -1,25 +1,24 @@
 #wrap{padding-bottom: 40px;}
 .comWidth{width:1226px;margin: 0 auto;overflow: hidden;}
+.comWidth2{width:1226px;margin: 0 auto;}
 .wrap_inner_top{background: #fff;}
 .wrap_inner_bottom{background: #F5F5F5;padding-bottom: 60px;}
 
 .topbar{background: #333;height: 40px;margin-bottom: 10px;}
-
+.topbar .leftArea {z-index: 20;}
 .topbar .leftArea li{float: left;}
 .topbar .leftArea a{color: #b0b0b0;font-size: 12px;line-height: 40px;}
 .topbar .leftArea a:hover{color: #fff;}
 .topbar .leftArea .sep{line-height: 35px;color: #424242;width: 16px;display: inline-block;margin: 0 auto;text-align: center;}
-.topbar .rightArea{float: right;}
+.topbar .rightArea{float: right;position: relative;}
 .topbar .rightArea a{color: #b0b0b0;font-size: 12px;line-height: 40px;display: inline-block;}
 .topbar .rightArea .sep{line-height: 35px;color:#424242;width: 10px;text-align: center;}
-.topbar .buy_car{background: #424242; width: 120px;height: 40px; margin-left: 20px;position: relative;}
-.topbar .buy_car i{background: url(../images/);}
-
-
+.topbar .buy_car{margin-left: 20px;cursor: pointer;}
+.topbar .buy_car_spec{width: 120px;height: 100px;background: red;position: absolute;left: 0;top: 20px;z-index: 3000;}
 .container{}
 
 .nav{height: 90px;}
-.nav .logo{background: url(../images/logo.jpg) 0 0 no-repeat;width: 55px;height: 55px;margin-right: 100px;margin-top: 10px;}
+.nav .logo{background: url(../images/logo.jpg) 0 0 no-repeat;width: 55px;height: 55px;margin-right:1 00px;margin-top: 10px;}
 .nav .nav_list{height: 55px;}
 .nav .nav_list li{float:left;padding: 26px 18px 38px;}
 .nav .nav_list a{color: #333;font-size: 16px;}
@@ -56,8 +55,9 @@ margin-left: 7px;}
 .hot_img{margin-left: 12px;}
 
 .spec_top{height: 50px;margin-top: 50px;}
-.spec_top .spec_type_nav li{float: left;color: #424242;font-size: 16px;margin-left: 24px;}
-.spec_top .spec_type_nav li:hover{cursor: pointer;  color: #ff6700;border-bottom: 2px solid #ff6700;}
+.spec_top .spec_type_nav li{float: left;}
+.spec_top .spec_type_nav li a{color: #424242;font-size: 16px;margin-left: 24px;padding-bottom: 3px;}
+.spec_top .spec_type_nav li a:hover,.spec_top .spec_type_nav li .cur{cursor: pointer;color: #ff6700;border-bottom: 2px solid #ff6700;}
 .spec_item{width: 234px;height: 300px;background: #fff;padding-top: 39px;margin-right: 14px;}
 .spec_img{width: 160px;height: 160px;display:block;margin: 0 auto;}
 .spec_img img{width: 160px;height: 160px;}

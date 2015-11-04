@@ -1,0 +1,9 @@
+$(function(){
+	//购物车切换图片
+	$(".buy_car").mouseover(function(){
+		$(this).attr("src","images/shopcarhover.png");
+	});
+	$(".buy_car").mouseout(function(){
+		$(this).attr("src","images/shopcar.png");
+	});
+})
