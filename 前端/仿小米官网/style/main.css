@@ -64,13 +64,14 @@ margin-left: 7px;}
 .spec_type_title{font-weight: normal;font-size: 22px;color: #333;}
 .spec_title{text-align: center;}
 .spec_title a{color: #212121;font-size: 14px;font-weight: normal;}
-.spec_desc{text-align: center;font-size: 12px;color: #b0b0b0;}
+.spec_desc{text-align: center;font-size: 12px;color: #b0b0b0;margin-bottom: 10px;}
 .spec_money{text-align: center;color: #ff6709;}
 
 .star_spec,.recommend{width: 2480px; }
 .star_spec .spec_item{background: #FAFAFA;}
 .star_spec li,.recommend li{float: left;}
 .star_spec li a{}
+.star_spec .spec_img{margin-bottom: 20px;}
 .star_spec .spec_left_right,.recommend .spec_left_right{width: 100px;height: 20px;margin-left:1022px;margin-top: 10px; }
 .star_spec .spec_left_right a,.recommend .spec_left_right a{width: 34px;height: 22px;border: 1px solid #e0e0e0;
 display: block;cursor: pointer;}
@@ -157,7 +158,7 @@ color: #616161;text-align: center;margin-bottom: 30px;border-right: 1px solid rg
 #footer .footer_service3{background: url(../images/icon/footer_service3.png) no-repeat 55px 0;}
 #footer .footer_service4{background: url(../images/icon/footer_service4.png) no-repeat 55px 0;}
 #footer .footer_top_service .footer_service5{background: url(../images/icon/footer_service5.png) no-repeat 55px 0;border:none;}
-#footer .footer_top_links{}
+#footer .footer_top_links{padding-bottom: 30px;}
 #footer .links_service{width: 165px;}
 #footer .links_service_title{color: #424242;font-size: 14px;font-weight: normal;}
 #footer .links_service_content{}
@@ -166,6 +167,7 @@ color: #616161;text-align: center;margin-bottom: 30px;border-right: 1px solid rg
 #footer .links_tel{margin-top: 20px;margin-right: 50px;border-left: 1px solid #e0e0e0;padding-left: 65px;}
 #footer .links_tel_num{color: #ff6700;font-size: 22px;}
 #footer .links_tel_info{width: 140px;text-align: center;font-size: 12px;color: #616161;}
+#footer .links_tel_img{margin-left: 10px;margin-top: 18px;}
 
 #footer .footer_bottom{background: #fafafa;}
 #footer .footer_bottom{padding: 30px 0;}
