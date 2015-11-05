@@ -13,12 +13,15 @@
 .topbar .rightArea{float: right;position: relative;}
 .topbar .rightArea a{color: #b0b0b0;font-size: 12px;line-height: 40px;display: inline-block;}
 .topbar .rightArea .sep{line-height: 35px;color:#424242;width: 10px;text-align: center;}
+.topbar .login a:hover,.topbar .sep a:hover{color: #fff}
 .topbar .buy_car{margin-left: 20px;cursor: pointer;}
-.topbar .buy_car_spec{width: 120px;height: 100px;background: red;position: absolute;left: 0;top: 20px;z-index: 3000;}
+.topbar .buy_car_spec{width: 320px;height: 0px;background: #fff;position: absolute;left: -120px;top: 40px;
+	z-index: 3;box-shadow: 0 2px 10px rgba(0,0,0,0.15);}
+.topbar .buy_car_spec p{text-align: center;line-height: 100px;font-size: 12px;color: #424242;}
 .container{}
 
 .nav{height: 90px;}
-.nav .logo{background: url(../images/logo.jpg) 0 0 no-repeat;width: 55px;height: 55px;margin-right:1 00px;margin-top: 10px;}
+.nav .logo{background: url(../images/logo.jpg) 0 0 no-repeat;width: 55px;height: 55px;margin-right:180px;margin-top: 10px;}
 .nav .nav_list{height: 55px;}
 .nav .nav_list li{float:left;padding: 26px 18px 38px;}
 .nav .nav_list a{color: #333;font-size: 16px;}
