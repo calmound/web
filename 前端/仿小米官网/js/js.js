@@ -11,12 +11,15 @@ $(function(){
 	});
 	$(".buy_car").mouseout(function(){
 		$(".buy_car_spec").stop();
-		$(".buy_car_img").attr("src","images/shopcar.png");
-		$(".buy_car_spec").animate({
-			height:"0"
-		},200,function(){
-				$(".buy_car p").html("");
-		});
+        setTimeout(function(){
+            $(".buy_car_img").attr("src","images/shopcar.png");
+            $(".buy_car_spec").animate({
+                height:"0"
+            },200,function(){
+                $(".buy_car p").html("");
+            });
+        },200);
+		
 	});
 
 	//小米明星单品切换
