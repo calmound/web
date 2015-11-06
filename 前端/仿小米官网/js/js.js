@@ -19,7 +19,6 @@ $(function(){
                 $(".buy_car p").html("");
             });
         },200);
-		
 	});
 
 	//小米明星单品切换
@@ -34,4 +33,6 @@ $(function(){
 			flag_spec_star = 0;
 		}
 	});
+
+	
 })
