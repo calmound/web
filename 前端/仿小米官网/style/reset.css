@@ -7,3 +7,6 @@ select,input,textarea{outline: none;border:none;background: none;}
 
 .fl{float: left;}
 .fr{float: right;}
+
+.clearfix:after{content: "";display: block;clear: both;}
+.clearfix{zoom:1;}
