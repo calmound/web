@@ -47,18 +47,6 @@ $(function() {
 		}, 200);
 	});
 
-	//小米明星单品切换
-	var flag_spec_star = 0;
-	$(".left_img").click(function() {
-		if (flag_spec_star == 0) {
-			flag_spec_star = 1;
-		}
-	});
-	$(".right_img").click(function() {
-		if (flag_spec_star == 1) {
-			flag_spec_star = 0;
-		}
-	});
 	//搜索框点击，移入，移出动画
 	$(document).click(function() {
 		$(".search_extra").hide();
@@ -85,7 +73,8 @@ $(function() {
 	// 导航栏显示隐藏的div
 	var isHoverNav = false;
 	var timer2 = null;
-	function changeStateDown(index){
+
+	function changeStateDown(index) {
 		switch (index) {
 			case 0:
 				$(".nav_menu_show1").slideDown(400);
@@ -107,7 +96,8 @@ $(function() {
 				break;
 		}
 	}
-	function changeStateUp(index){
+
+	function changeStateUp(index) {
 		switch (index) {
 			case 0:
 				$(".nav_menu_show1").slideUp(400);
@@ -129,21 +119,22 @@ $(function() {
 				break;
 		}
 	}
-	var preIndex = -1,curIndex = -1;
+	var preIndex = -1,
+		curIndex = -1;
 	$(".nav .nav_list li").mouseover(function() {
-		curIndex = $(this).index(); 
+		curIndex = $(this).index();
 		isHoverNav = true;
 		changeStateDown(curIndex);
-		if(preIndex!=-1 && preIndex != curIndex) changeStateUp(preIndex);
+		if (preIndex != -1 && preIndex != curIndex) changeStateUp(preIndex);
 		preIndex = curIndex;
-		$(this).mouseout(function(){
+		$(this).mouseout(function() {
 			isHoverNav = false;
 			//$(this).stop(timer2);
-			timer2 = setTimeout(function(){
-				if(!isHoverNav){
+			timer2 = setTimeout(function() {
+				if (!isHoverNav) {
 					changeStateUp(preIndex);
 				}
-			},100);
+			}, 100);
 			return false;
 		});
 		return false;
@@ -151,53 +142,87 @@ $(function() {
 	$(".navMenu").mouseover(function() {
 		isHoverNav = true;
 		changeStateDown(curIndex);
-		$(this).mouseout(function(){
+		$(this).mouseout(function() {
 			isHoverNav = false;
 			//$(this).stop(timer2);
-			timer2 = setTimeout(function(){
-				if(!isHoverNav){
+			timer2 = setTimeout(function() {
+				if (!isHoverNav) {
 					changeStateUp(preIndex);
 				}
-			},100);
+			}, 100);
 			return false;
 		})
 		return false;
 	});
 
 	//明星单品切换
-	var dir = 0;//0:left,1:right
-	$(".left_img").click(function(){
-		if(dir){
-			$(".left_img > img").attr("src","images/icon/left2.png");
-			$(".right_img > img").attr("src","images/icon/right1.png");
+	var dir = 0; //0:left,1:right
+	$(".left_img").click(function() {
+		if (dir) {
+			$(".left_img > img").attr("src", "images/icon/left2.png");
+			$(".right_img > img").attr("src", "images/icon/right1.png");
 			$(".star_spec .spec_item_list").animate({
-				left:"0"
-			},200);
+				left: "0"
+			}, 200);
 			dir = 0;
 		}
 	});
-	$(".right_img").click(function(){
-		if(dir == 0){
-			$(".left_img > img").attr("src","images/icon/left1.png");
-			$(".right_img > img").attr("src","images/icon/right2.png");
+	$(".right_img").click(function() {
+		if (dir == 0) {
+			$(".left_img > img").attr("src", "images/icon/left1.png");
+			$(".right_img > img").attr("src", "images/icon/right2.png");
 			$(".star_spec .spec_item_list").animate({
-				 left:"-1234px"
-			},200);
+				left: "-1234px"
+			}, 200);
 			dir = 1;
 		}
 	});
 
-	$(".match .spec_type_nav > li > a").hover(function(){
+	//为你推荐单品切换
+	var dir_recommend = 0; 
+	function changeDir(dir){
+		if(dir == 0){
+			$(".img1 > img").attr("src", "images/icon/left_b_2.png");
+			$(".img2 > img").attr("src", "images/icon/right_b_1.png");
+		}else if(dir == 1){
+			$(".img1 > img").attr("src", "images/icon/left_b_1.png");
+			$(".img2 > img").attr("src", "images/icon/right_b_1.png");
+		}else{
+			$(".img1 > img").attr("src", "images/icon/left_b_1.png");
+			$(".img2 > img").attr("src", "images/icon/right_b_2.png");
+		}
+	}
+	$(".img1").click(function() {
+		if (dir > 0) {
+			dir--;
+			changeDir(dir);
+			$(".recommend .recommend_spec_list").animate({
+				left: "+=1234px"
+			}, 200);
+			
+		}
+	});
+	$(".img2").click(function() {
+		if (dir < 2) {
+			dir++;
+			dir = dir%3;
+			changeDir(dir);
+			$(".recommend .recommend_spec_list").animate({
+				left: "-=1234px"
+			}, 200);
+		}
+	});
+	$(".match .spec_type_nav > li > a").hover(function() {
 		var index = $(this).index();
 		$(".match .cur").removeClass("cur");
 		$(this).addClass("cur");
 	});
-	$(".around .spec_type_nav > li > a").hover(function(){
+	$(".around .spec_type_nav > li > a").hover(function() {
 		var index = $(this).index();
 		$(".around .cur").removeClass("cur");
 		$(this).addClass("cur");
 	});
-	$(".accessories .spec_type_nav > li > a").hover(function(){
+	$(".accessories .spec_type_nav > li > a").hover(function() {
 		var index = $(this).index();
 		$(".accessories .cur").removeClass("cur");
 		$(this).addClass("cur");

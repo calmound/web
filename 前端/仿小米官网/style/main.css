@@ -96,12 +96,11 @@ margin-left: 7px;}
 
 .star_spec{position: relative;height: 500px;}
 .star_spec,.recommend{width: 2480px; }
-.star_spec .spec_item_list{height: 340px;position: absolute;left: 0;top: 100px;}
+.star_spec .spec_item_list{height: 340px;position: absolute;left: 0;top: 100px;padding-bottom: 20px;}
 .star_spec .spec_item{background: #FAFAFA;}
 
 .star_spec li,.recommend li{float: left;}
 .star_spec .spec_img{margin-bottom: 20px;}
-.star_spec .spec_item_list{padding-bottom: 20px;}
 .star_spec .spec_left_right,.recommend .spec_left_right{width: 100px;height: 20px;margin-left:1022px;margin-top: 10px; }
 .star_spec .spec_left_right a,.recommend .spec_left_right a{width: 34px;height: 22px;border: 1px solid #e0e0e0;
 display: block;cursor: pointer;}
@@ -112,6 +111,8 @@ display: block;cursor: pointer;}
 .spec_top_border4{border-top: 1px solid #e53935;}
 .spec_top_border5{border-top: 1px solid #00c0a5;}
 
+.recommend{position: relative;height: 400px;}
+.recommend .recommend_spec_list{position: absolute;left: 0;top: 50px;padding-bottom: 20px;}
 
 .hardware{}
 .hardware .view_all{margin-top: 10px;}
