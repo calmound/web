@@ -10,3 +10,5 @@ select,input,textarea{outline: none;border:none;background: none;}
 
 .clearfix:after{content: "";display: block;clear: both;}
 .clearfix{zoom:1;}
+
+img{border: 0px;}
